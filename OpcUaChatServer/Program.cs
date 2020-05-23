@@ -1,5 +1,6 @@
 ﻿using OpcUaChatServer.Server;
 using System;
+using System.ComponentModel.Composition;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -9,15 +10,15 @@ namespace OpcUaChatServer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Chat server is starting. Press 'Esc' to exit.");
+            Console.WriteLine("Chat server is starting. Press any key to exit.");
 
-            using var cts = new CancellationTokenSource();
+            MefManager.Initialize();
+            MefManager.Container.GetExportedValue<Logger>().Logged += (x) => Console.WriteLine(x);
+
             var server = new ChatServer();
-            var serverTask = Task.Run(() => server.Run(cts.Token));
+            var serverTask = Task.Run(() => server.Run());
 
-            while (Console.ReadKey().Key != ConsoleKey.Escape) { }
-            cts.Cancel();
-            serverTask.Wait();
+            Console.ReadKey();
         }
     }
 }
