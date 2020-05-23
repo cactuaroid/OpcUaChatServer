@@ -9,4 +9,8 @@
     <PackageReference Include="System.ComponentModel.Composition" Version="4.7.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OpcUaChatServer.Server\OpcUaChatServer.Server.csproj" />
+  </ItemGroup>
+
 </Project>
