@@ -6,7 +6,7 @@ pushd .
 cd %ThisDir%
 
 :: Source design files
-set Design=%ThisDir%Design\animalModel
+set Design=%ThisDir%Design\ChatServerDesign
 set DesignXml=%Design%.xml
 set DesignCsv=%Design%.csv
 
@@ -41,9 +41,9 @@ if %ERRORLEVEL% NEQ 0 (
 echo Done.
 
 :: Copy design files to 'Published'
-COPY "%DesignXml%" "%PublishedDir%"
+copy "%DesignXml%" "%PublishedDir%"
 echo %DesignXml% copied.
-COPY "%DesignCsv%" "%PublishedDir%"
+copy "%DesignCsv%" "%PublishedDir%"
 echo %DesignCsv% copied.
 
 :: NodeSet.xml is obsolete, no longer needed.

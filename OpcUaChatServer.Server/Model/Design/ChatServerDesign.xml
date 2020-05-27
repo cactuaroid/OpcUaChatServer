@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<opc:ModelDesign
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:opc="http://opcfoundation.org/UA/ModelDesign.xsd"
+  xmlns:ua="http://opcfoundation.org/UA/"
+  xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
+	xmlns="https://github.com/cactuaroid/OpcUaChatServer"
+  TargetNamespace="https://github.com/cactuaroid/OpcUaChatServer">
+
+  <opc:Namespaces>
+    <opc:Namespace Name="OpcUa" Prefix="Opc.Ua" XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd">http://opcfoundation.org/UA/</opc:Namespace>
+    <opc:Namespace Name="OpcUaChatServer" Prefix="OpcUaChatServer">https://github.com/cactuaroid/OpcUaChatServer</opc:Namespace>
+  </opc:Namespaces>
+
+  <!-- Types -->
+
+  <opc:ObjectType SymbolicName="ChatLogsType" BaseType="ua:BaseObjectType" SupportsEvents="true">
+    <opc:Children>
+      <opc:Method SymbolicName="Post" TypeDefinition="PostMethodType" />
+    </opc:Children>
+  </opc:ObjectType>
+
+  <opc:Method SymbolicName="PostMethodType">
+    <opc:InputArguments>
+      <opc:Argument Name="ChatLog" DataType="ChatLog" />
+    </opc:InputArguments>
+  </opc:Method>
+
+  <opc:ObjectType SymbolicName="ChatLogEventType" BaseType="ua:BaseEventType">
+    <opc:Children>
+      <opc:Variable SymbolicName="ChatLog" TypeDefinition="ChatLogType" />
+    </opc:Children>
+  </opc:ObjectType>
+
+  <opc:VariableType SymbolicName="ChatLogType" DataType="ChatLog" BaseType="ua:BaseDataVariableType" ValueRank="Scalar" ExposesItsChildren="true">
+    <opc:Description>Represents a chat log</opc:Description>
+    <opc:Children>
+      <opc:Variable SymbolicName="At" TypeDefinition="ua:BaseDataVariableType" DataType="ua:DateTime" ModellingRule="Mandatory" />
+      <opc:Variable SymbolicName="Name" TypeDefinition="ua:BaseDataVariableType" DataType="ua:String" ModellingRule="Mandatory" />
+      <opc:Variable SymbolicName="Content" TypeDefinition="ua:BaseDataVariableType" DataType="ua:String" ModellingRule="Mandatory" />
+    </opc:Children>
+  </opc:VariableType>
+
+  <opc:DataType SymbolicName="ChatLog" BaseType="ua:Structure">
+    <opc:Description>A chat log</opc:Description>
+    <opc:Fields>
+      <opc:Field Name="At" DataType="ua:DateTime" />
+      <opc:Field Name="Name" DataType="ua:String" />
+      <opc:Field Name="Content" DataType="ua:String" />
+    </opc:Fields>
+  </opc:DataType>
+
+  <!--  Objects -->
+  
+  <opc:Object SymbolicName="ChatLogs" TypeDefinition="ChatLogsType">
+    <opc:References>
+      <opc:Reference IsInverse="true">
+        <opc:ReferenceType>ua:Organizes</opc:ReferenceType>
+        <opc:TargetId>ua:ObjectsFolder</opc:TargetId>
+      </opc:Reference>
+      <opc:Reference IsInverse="true">
+        <opc:ReferenceType>ua:HasNotifier</opc:ReferenceType>
+        <opc:TargetId>ua:Server</opc:TargetId>
+      </opc:Reference>
+    </opc:References>
+  </opc:Object>
+
+</opc:ModelDesign>

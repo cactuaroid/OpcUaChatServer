@@ -1,0 +1,29 @@
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd"
+  xmlns:tns="https://github.com/cactuaroid/OpcUaChatServer"
+  targetNamespace="https://github.com/cactuaroid/OpcUaChatServer"
+  elementFormDefault="qualified"
+>
+  <xs:import namespace="http://opcfoundation.org/UA/2008/02/Types.xsd" />
+
+  <xs:complexType name="ChatLog">
+    <xs:annotation>
+      <xs:documentation>A chat log</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="At" type="xs:dateTime" minOccurs="0" />
+      <xs:element name="Name" type="xs:string" minOccurs="0" nillable="true" />
+      <xs:element name="Content" type="xs:string" minOccurs="0" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChatLog" type="tns:ChatLog" />
+
+  <xs:complexType name="ListOfChatLog">
+    <xs:sequence>
+      <xs:element name="ChatLog" type="tns:ChatLog" minOccurs="0" maxOccurs="unbounded" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfChatLog" type="tns:ListOfChatLog" nillable="true"></xs:element>
+
+</xs:schema>
