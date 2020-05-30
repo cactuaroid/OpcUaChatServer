@@ -10,7 +10,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OpcUaChatServer.Infrastructure\OpcUaChatServer.Infrastructure.csproj" />
     <ProjectReference Include="..\OpcUaChatServer.Server\OpcUaChatServer.Server.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Opc.Ua.SampleServer.Config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

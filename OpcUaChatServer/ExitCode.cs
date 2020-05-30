@@ -30,28 +30,14 @@
  * http://opcfoundation.org/License/MIT/1.00/
  * ======================================================================*/
 
-using OpcUaChatServer.Server;
-using System;
-using System.ComponentModel.Composition;
-using System.Threading.Tasks;
-
 namespace OpcUaChatServer
 {
-    class Program
+    public enum ExitCode : int
     {
-        static int Main(string[] args)
-        {
-            MefManager.Initialize();
-            MefManager.Container.GetExportedValue<Logger>().Logged += (x) => Console.WriteLine(x);
-
-            // command line options
-            int stopTimeout = 0;
-            bool autoAccept = (args[0] == "-a");
-
-            ServerLauncher server = new ServerLauncher(autoAccept, stopTimeout);
-            server.Run();
-
-            return (int)ServerLauncher.ExitCode;
-        }
-    }
+        Ok = 0,
+        ErrorServerNotStarted = 0x80,
+        ErrorServerRunning = 0x81,
+        ErrorServerException = 0x82,
+        ErrorInvalidCommandLine = 0x100
+    };
 }

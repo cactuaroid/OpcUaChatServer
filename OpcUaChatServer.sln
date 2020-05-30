@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpcUaChatServer", "OpcUaChatServer\OpcUaChatServer.csproj", "{EF43EDAF-B199-4D16-967B-B31481828A72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpcUaChatServer.Server", "OpcUaChatServer.Server\OpcUaChatServer.Server.csproj", "{AAE5910C-26D4-4764-A108-F9B900CF40C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpcUaChatServer.Server", "OpcUaChatServer.Server\OpcUaChatServer.Server.csproj", "{AAE5910C-26D4-4764-A108-F9B900CF40C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpcUaChatServer.Infrastructure", "OpcUaChatServer.Infrastructure\OpcUaChatServer.Infrastructure.csproj", "{3025B7C1-27C3-4C51-A4D5-981E79D9F011}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{AAE5910C-26D4-4764-A108-F9B900CF40C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAE5910C-26D4-4764-A108-F9B900CF40C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAE5910C-26D4-4764-A108-F9B900CF40C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3025B7C1-27C3-4C51-A4D5-981E79D9F011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3025B7C1-27C3-4C51-A4D5-981E79D9F011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3025B7C1-27C3-4C51-A4D5-981E79D9F011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3025B7C1-27C3-4C51-A4D5-981E79D9F011}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

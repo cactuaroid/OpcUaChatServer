@@ -5,12 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="OpcUa\Model\Published\OpcUaChatServer.PredefinedNodes.uanodes" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="OpcUa\Model\Published\OpcUaChatServer.PredefinedNodes.uanodes" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="OPCFoundation.NetStandard.Opc.Ua" Version="1.4.361.38" />
     <PackageReference Include="System.ComponentModel.Composition" Version="4.7.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\Published\" />
+    <ProjectReference Include="..\OpcUaChatServer.Infrastructure\OpcUaChatServer.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
