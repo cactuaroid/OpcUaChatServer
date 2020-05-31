@@ -49,9 +49,6 @@ namespace OpcUaChatServer.Server
         [Import]
         private Logger m_logger = null;
 
-        [Import]
-        private ChatService m_chatService = null;
-
         public ChatServer()
         {
             MefManager.Container.ComposeParts(this);
@@ -121,7 +118,7 @@ namespace OpcUaChatServer.Server
             List<INodeManager> nodeManagers = new List<INodeManager>();
 
             // create the custom node managers.
-            nodeManagers.Add(new ChatServerNodeManager(server, configuration, m_chatService));
+            nodeManagers.Add(new ChatServerNodeManager(server, configuration));
             
             // create master node manager.
             return new MasterNodeManager(server, configuration, null, nodeManagers.ToArray());

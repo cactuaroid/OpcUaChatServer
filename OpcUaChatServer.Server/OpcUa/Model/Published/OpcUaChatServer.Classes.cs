@@ -93,8 +93,8 @@ namespace OpcUaChatServer
            "AQAAAC0AAABodHRwczovL2dpdGh1Yi5jb20vY2FjdHVhcm9pZC9PcGNVYUNoYXRTZXJ2ZXL/////hGCA" +
            "AgEAAAABABQAAABDaGF0TG9nc1R5cGVJbnN0YW5jZQEBwToBAcE6wToAAAH/////AQAAAARhggoEAAAA" +
            "AQAEAAAAUG9zdAEBmToALwEBmTqZOgAAAQH/////AQAAABdgqQoCAAAAAAAOAAAASW5wdXRBcmd1bWVu" +
-           "dHMBAZo6AC4ARJo6AACWAQAAAAEAKgEBGAAAAAcAAABDaGF0TG9nAQHmOv////8AAAAAAAEAKAEBAAAA" +
-           "AQAAAAAAAAABAf////8AAAAA";
+           "dHMBAZo6AC4ARJo6AACWAgAAAAEAKgEBEwAAAAQAAABOYW1lAAz/////AAAAAAABACoBARYAAAAHAAAA" +
+           "Q29udGVudAAM/////wAAAAAAAQAoAQEAAAABAAAAAAAAAAEB/////wAAAAA=";
         #endregion
         #endif
         #endregion
@@ -191,6 +191,122 @@ namespace OpcUaChatServer
         private PostMethodState m_postMethod;
         #endregion
     }
+    #endif
+    #endregion
+
+    #region PostMethodState Class
+    #if (!OPCUA_EXCLUDE_PostMethodState)
+    /// <summary>
+    /// Stores an instance of the PostMethodType Method.
+    /// </summary>
+    /// <exclude />
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
+    public partial class PostMethodState : MethodState
+    {
+        #region Constructors
+        /// <summary>
+        /// Initializes the type with its default attribute values.
+        /// </summary>
+        public PostMethodState(NodeState parent) : base(parent)
+        {
+        }
+
+        /// <summary>
+        /// Constructs an instance of a node.
+        /// </summary>
+        /// <param name="parent">The parent.</param>
+        /// <returns>The new node.</returns>
+        public new static NodeState Construct(NodeState parent)
+        {
+            return new PostMethodState(parent);
+        }
+
+        #if (!OPCUA_EXCLUDE_InitializationStrings)
+        /// <summary>
+        /// Initializes the instance.
+        /// </summary>
+        protected override void Initialize(ISystemContext context)
+        {
+            Initialize(context, InitializationString);
+            InitializeOptionalChildren(context);
+        }
+
+        /// <summary>
+        /// Initializes the any option children defined for the instance.
+        /// </summary>
+        protected override void InitializeOptionalChildren(ISystemContext context)
+        {
+            base.InitializeOptionalChildren(context);
+        }
+
+        #region Initialization String
+        private const string InitializationString =
+           "AQAAAC0AAABodHRwczovL2dpdGh1Yi5jb20vY2FjdHVhcm9pZC9PcGNVYUNoYXRTZXJ2ZXL/////BGGC" +
+           "CgQAAAABAA4AAABQb3N0TWV0aG9kVHlwZQEBnToALwEBnTqdOgAAAQH/////AQAAABdgqQoCAAAAAAAO" +
+           "AAAASW5wdXRBcmd1bWVudHMBAZ46AC4ARJ46AACWAgAAAAEAKgEBEwAAAAQAAABOYW1lAAz/////AAAA" +
+           "AAABACoBARYAAAAHAAAAQ29udGVudAAM/////wAAAAAAAQAoAQEAAAABAAAAAAAAAAEB/////wAAAAA=";
+        #endregion
+        #endif
+        #endregion
+
+        #region Event Callbacks
+        /// <summary>
+        /// Raised when the the method is called.
+        /// </summary>
+        public PostMethodStateMethodCallHandler OnCall;
+        #endregion
+
+        #region Public Properties
+        #endregion
+
+        #region Overridden Methods
+        /// <summary>
+        /// Invokes the method, returns the result and output argument.
+        /// </summary>
+        protected override ServiceResult Call(
+            ISystemContext _context,
+            NodeId _objectId,
+            IList<object> _inputArguments,
+            IList<object> _outputArguments)
+        {
+            if (OnCall == null)
+            {
+                return base.Call(_context, _objectId, _inputArguments, _outputArguments);
+            }
+
+            ServiceResult result = null;
+
+            string name = (string)_inputArguments[0];
+            string content = (string)_inputArguments[1];
+
+            if (OnCall != null)
+            {
+                result = OnCall(
+                    _context,
+                    this,
+                    _objectId,
+                    name,
+                    content);
+            }
+
+            return result;
+        }
+        #endregion
+
+        #region Private Fields
+        #endregion
+    }
+
+    /// <summary>
+    /// Used to receive notifications when the method is called.
+    /// </summary>
+    /// <exclude />
+    public delegate ServiceResult PostMethodStateMethodCallHandler(
+        ISystemContext context,
+        MethodState method,
+        NodeId objectId,
+        string name,
+        string content);
     #endif
     #endregion
 
@@ -356,119 +472,6 @@ namespace OpcUaChatServer
         private ChatLogState m_chatLog;
         #endregion
     }
-    #endif
-    #endregion
-
-    #region PostMethodState Class
-    #if (!OPCUA_EXCLUDE_PostMethodState)
-    /// <summary>
-    /// Stores an instance of the PostMethodType Method.
-    /// </summary>
-    /// <exclude />
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
-    public partial class PostMethodState : MethodState
-    {
-        #region Constructors
-        /// <summary>
-        /// Initializes the type with its default attribute values.
-        /// </summary>
-        public PostMethodState(NodeState parent) : base(parent)
-        {
-        }
-
-        /// <summary>
-        /// Constructs an instance of a node.
-        /// </summary>
-        /// <param name="parent">The parent.</param>
-        /// <returns>The new node.</returns>
-        public new static NodeState Construct(NodeState parent)
-        {
-            return new PostMethodState(parent);
-        }
-
-        #if (!OPCUA_EXCLUDE_InitializationStrings)
-        /// <summary>
-        /// Initializes the instance.
-        /// </summary>
-        protected override void Initialize(ISystemContext context)
-        {
-            Initialize(context, InitializationString);
-            InitializeOptionalChildren(context);
-        }
-
-        /// <summary>
-        /// Initializes the any option children defined for the instance.
-        /// </summary>
-        protected override void InitializeOptionalChildren(ISystemContext context)
-        {
-            base.InitializeOptionalChildren(context);
-        }
-
-        #region Initialization String
-        private const string InitializationString =
-           "AQAAAC0AAABodHRwczovL2dpdGh1Yi5jb20vY2FjdHVhcm9pZC9PcGNVYUNoYXRTZXJ2ZXL/////BGGC" +
-           "CgQAAAABAA4AAABQb3N0TWV0aG9kVHlwZQEBnToALwEBnTqdOgAAAQH/////AQAAABdgqQoCAAAAAAAO" +
-           "AAAASW5wdXRBcmd1bWVudHMBAZ46AC4ARJ46AACWAQAAAAEAKgEBGAAAAAcAAABDaGF0TG9nAQHmOv//" +
-           "//8AAAAAAAEAKAEBAAAAAQAAAAAAAAABAf////8AAAAA";
-        #endregion
-        #endif
-        #endregion
-
-        #region Event Callbacks
-        /// <summary>
-        /// Raised when the the method is called.
-        /// </summary>
-        public PostMethodStateMethodCallHandler OnCall;
-        #endregion
-
-        #region Public Properties
-        #endregion
-
-        #region Overridden Methods
-        /// <summary>
-        /// Invokes the method, returns the result and output argument.
-        /// </summary>
-        protected override ServiceResult Call(
-            ISystemContext _context,
-            NodeId _objectId,
-            IList<object> _inputArguments,
-            IList<object> _outputArguments)
-        {
-            if (OnCall == null)
-            {
-                return base.Call(_context, _objectId, _inputArguments, _outputArguments);
-            }
-
-            ServiceResult result = null;
-
-            ChatLog chatLog = (ChatLog)ExtensionObject.ToEncodeable((ExtensionObject)_inputArguments[0]);
-
-            if (OnCall != null)
-            {
-                result = OnCall(
-                    _context,
-                    this,
-                    _objectId,
-                    chatLog);
-            }
-
-            return result;
-        }
-        #endregion
-
-        #region Private Fields
-        #endregion
-    }
-
-    /// <summary>
-    /// Used to receive notifications when the method is called.
-    /// </summary>
-    /// <exclude />
-    public delegate ServiceResult PostMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
-        ChatLog chatLog);
     #endif
     #endregion
 

@@ -5,11 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="OpcUa\Model\ChatServerNodeManager.Setup.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="OpcUa\Model\Published\OpcUaChatServer.PredefinedNodes.uanodes" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="OpcUa\Model\Published\OpcUaChatServer.PredefinedNodes.uanodes" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="OpcUa\ChatServerNodeManager.Setup.cs" />
   </ItemGroup>
 
   <ItemGroup>

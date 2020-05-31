@@ -14,9 +14,7 @@
     <opc:Namespace Name="OpcUaChatServer" Prefix="OpcUaChatServer">https://github.com/cactuaroid/OpcUaChatServer</opc:Namespace>
   </opc:Namespaces>
 
-  <!-- ### Object Types ###-->
-
-
+  <!-- Types -->
 
   <opc:ObjectType SymbolicName="ChatLogsType" BaseType="ua:BaseObjectType" SupportsEvents="true">
     <opc:Children>
@@ -24,19 +22,18 @@
     </opc:Children>
   </opc:ObjectType>
 
+  <opc:Method SymbolicName="PostMethodType">
+    <opc:InputArguments>
+      <opc:Argument Name="Name" DataType="ua:String" />
+      <opc:Argument Name="Content" DataType="ua:String" />
+    </opc:InputArguments>
+  </opc:Method>
+
   <opc:ObjectType SymbolicName="ChatLogEventType" BaseType="ua:BaseEventType">
     <opc:Children>
       <opc:Variable SymbolicName="ChatLog" TypeDefinition="ChatLogType" />
     </opc:Children>
   </opc:ObjectType>
-
-    <opc:Method SymbolicName="PostMethodType">
-    <opc:InputArguments>
-      <opc:Argument Name="ChatLog" DataType="ChatLog" />
-    </opc:InputArguments>
-  </opc:Method>
-  
-  <!-- ### Variable Types ###-->
 
   <opc:VariableType SymbolicName="ChatLogType" DataType="ChatLog" BaseType="ua:BaseDataVariableType" ValueRank="Scalar" ExposesItsChildren="true">
     <opc:Description>Represents a chat log</opc:Description>
@@ -47,8 +44,6 @@
     </opc:Children>
   </opc:VariableType>
 
-  <!-- ### Data Types ###-->
-
   <opc:DataType SymbolicName="ChatLog" BaseType="ua:Structure">
     <opc:Description>A chat log</opc:Description>
     <opc:Fields>
@@ -58,7 +53,8 @@
     </opc:Fields>
   </opc:DataType>
 
-  <!-- ##  Objects ### -->
+  <!--  Objects -->
+  
   <opc:Object SymbolicName="ChatLogs" TypeDefinition="ChatLogsType">
     <opc:References>
       <opc:Reference IsInverse="true">

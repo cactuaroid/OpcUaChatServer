@@ -18,7 +18,7 @@ if not exist %DesignXml% (
 )
 
 :: Before run this script, download https://github.com/OPCFoundation/UA-ModelCompiler and build in 'Release'.
-set ModelCompiler=..\..\..\UA-ModelCompiler\bin\Release\Opc.Ua.ModelCompiler.exe
+set ModelCompiler=..\..\..\..\UA-ModelCompiler\bin\Release\Opc.Ua.ModelCompiler.exe
 if not exist %ModelCompiler% (
    echo "%ModelCompiler%" is not found.
    pause

@@ -41,21 +41,26 @@ using Opc.Ua;
 using Opc.Ua.Server;
 using System.Reflection;
 using OpcUaChatServer.Server.Application;
+using System.ComponentModel.Composition;
 
 namespace OpcUaChatServer.Server
 {
+    // Application logics are implemented separately on ChatServerNodeManager.Setup.cs
+
     /// <summary>
     /// A node manager for chat server.
     /// </summary>
-    public class ChatServerNodeManager : CustomNodeManager2
+    public partial class ChatServerNodeManager : CustomNodeManager2
     {
         #region Constructors
         /// <summary>
         /// Initializes the node manager.
         /// </summary>
-        public ChatServerNodeManager(IServerInternal server, ApplicationConfiguration configuration, ChatService chatService)
+        public ChatServerNodeManager(IServerInternal server, ApplicationConfiguration configuration)
             : base(server, configuration)
         {
+            MefManager.Container.ComposeParts(this);
+
             // update the namespaces.
             List<string> namespaceUris = new List<string>();
             namespaceUris.Add(Namespaces.OpcUaChatServer);
@@ -66,10 +71,9 @@ namespace OpcUaChatServer.Server
             m_namespaceIndex = Server.NamespaceUris.GetIndexOrAppend(namespaceUris[1]);
 
             m_lastUsedId = 0;
-            m_chatService = chatService;
 
             // update the default context.
-            SystemContext.SystemHandle = m_chatService;
+            //SystemContext.SystemHandle = m_chatService;
         }
         #endregion
 
@@ -101,6 +105,8 @@ namespace OpcUaChatServer.Server
             lock (Lock)
             {
                 base.CreateAddressSpace(externalReferences);
+
+                SetupNodes();
             }
         }
 
@@ -181,7 +187,6 @@ namespace OpcUaChatServer.Server
         private ushort m_namespaceIndex;
         private ushort m_typeNamespaceIndex;
         private long m_lastUsedId;
-        private ChatService m_chatService;
         #endregion
     }
 }

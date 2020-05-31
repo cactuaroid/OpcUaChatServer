@@ -75,9 +75,24 @@
           </TypeId>
           <Body>
             <Argument>
-              <Name>ChatLog</Name>
+              <Name>Name</Name>
               <DataType>
-                <Identifier>ns=1;i=15078</Identifier>
+                <Identifier>i=12</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Content</Name>
+              <DataType>
+                <Identifier>i=12</Identifier>
               </DataType>
               <ValueRank>-1</ValueRank>
               <ArrayDimensions />
@@ -205,9 +220,24 @@
           </TypeId>
           <Body>
             <Argument>
-              <Name>ChatLog</Name>
+              <Name>Name</Name>
               <DataType>
-                <Identifier>ns=1;i=15078</Identifier>
+                <Identifier>i=12</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Content</Name>
+              <DataType>
+                <Identifier>i=12</Identifier>
               </DataType>
               <ValueRank>-1</ValueRank>
               <ArrayDimensions />

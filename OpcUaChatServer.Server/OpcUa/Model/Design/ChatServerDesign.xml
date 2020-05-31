@@ -24,7 +24,8 @@
 
   <opc:Method SymbolicName="PostMethodType">
     <opc:InputArguments>
-      <opc:Argument Name="ChatLog" DataType="ChatLog" />
+      <opc:Argument Name="Name" DataType="ua:String" />
+      <opc:Argument Name="Content" DataType="ua:String" />
     </opc:InputArguments>
   </opc:Method>
 
