@@ -46,7 +46,7 @@ namespace OpcUaChatServer.Server
             var message = new TranslationInfo(
                 "ChatLogEventType",
                 "en-US",
-                "New chat log has posted for '{0}'.",
+                "New chat log has been posted for '{0}'.",
                 m_chatLogsState.DisplayName);
             e.Initialize(
                 SystemContext,
