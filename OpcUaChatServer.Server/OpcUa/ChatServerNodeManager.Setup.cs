@@ -12,10 +12,14 @@ namespace OpcUaChatServer.Server
         [Import]
         private ChatService m_chatService = null;
 
+        private ChatLogsState m_chatLogsState;
+
         private void SetupNodes()
         {
-            var chatLogsState = FindPredefinedNode<ChatLogsState>(Objects.ChatLogs);
-            chatLogsState.Post.OnCall = Post;
+            m_chatLogsState = FindPredefinedNode<ChatLogsState>(Objects.ChatLogs);
+
+            m_chatLogsState.Post.OnCall = ChatLogsState_Post;
+            m_chatService.Posted += ChatService_Posted;
         }
 
         private TNodeState FindPredefinedNode<TNodeState>(uint id)
@@ -24,11 +28,40 @@ namespace OpcUaChatServer.Server
             return (TNodeState)base.FindPredefinedNode(new NodeId(id, m_typeNamespaceIndex), typeof(TNodeState));
         }
 
-        private ServiceResult Post(ISystemContext context, MethodState method, NodeId objectId, string name, string content)
+        private ServiceResult ChatLogsState_Post(ISystemContext context, MethodState method, NodeId objectId, string name, string content)
         {
             m_chatService.Post(name, content);
 
             return ServiceResult.Good;
+        }
+
+        private void ChatService_Posted(Application.ChatLog obj)
+        {
+            m_chatLogsState.ClearChangeMasks(SystemContext, true);
+
+            if (!m_chatLogsState.AreEventsMonitored) { return; }
+
+            // compose an event data
+            var e = new ChatLogEventState(null);
+            var message = new TranslationInfo(
+                "ChatLogEventType",
+                "en-US",
+                "New chat log has posted for '{0}'.",
+                m_chatLogsState.DisplayName);
+            e.Initialize(
+                SystemContext,
+                m_chatLogsState,
+                EventSeverity.MediumLow,
+                new LocalizedText(message));
+            e.ChatLog = new ChatLogState(e);
+            e.ChatLog.At = new BaseDataVariableState<DateTime>(e.ChatLog);
+            e.ChatLog.At.Value = obj.At;
+            e.ChatLog.Name = new BaseDataVariableState<string>(e.ChatLog);
+            e.ChatLog.Name.Value = obj.Name;
+            e.ChatLog.Content = new BaseDataVariableState<string>(e.ChatLog);
+            e.ChatLog.Content.Value = obj.Content;
+
+            m_chatLogsState.ReportEvent(SystemContext, e);
         }
     }
 }

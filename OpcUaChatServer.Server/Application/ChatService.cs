@@ -11,9 +11,12 @@ namespace OpcUaChatServer.Server.Application
         [Import]
         private Logger m_logger = null;
 
+        public event Action<ChatLog> Posted;
+
         public void Post(string name, string content)
         {
             m_logger.Info($"name: {name}, content: {content}");
+            Posted?.Invoke(new ChatLog(name, content));
         }
     }
 }
