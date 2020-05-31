@@ -45,7 +45,7 @@ using OpcUaChatServer.Server.Application;
 namespace OpcUaChatServer.Server
 {
     /// <summary>
-    /// A node manager for a variety of test data.
+    /// A node manager for chat server.
     /// </summary>
     public class ChatServerNodeManager : CustomNodeManager2
     {
@@ -66,8 +66,6 @@ namespace OpcUaChatServer.Server
             m_namespaceIndex = Server.NamespaceUris.GetIndexOrAppend(namespaceUris[1]);
 
             m_lastUsedId = 0;
-
-            // create the object used to access the system.
             m_chatService = chatService;
 
             // update the default context.

@@ -2,11 +2,11 @@
 <ApplicationConfiguration
   xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd"
   xmlns="http://opcfoundation.org/UA/SDK/Configuration.xsd"
-  schemaLocation="./Schema/ApplicationConfiguration.xsd"
->
-  <ApplicationName>UA Core Sample Server</ApplicationName>
-  <ApplicationUri>urn:localhost:OPCFoundation:CoreSampleServer</ApplicationUri>
-  <ProductUri>http://opcfoundation.org/UA/CoreSampleServer</ProductUri>
+  schemaLocation="./Schema/ApplicationConfiguration.xsd">
+  
+  <ApplicationName>OpcUaChatServer</ApplicationName>
+  <ApplicationUri>urn:localhost:cactuaroid:OpcUaChatServer</ApplicationUri>
+  <ProductUri>https://github.com/cactuaroid/OpcUaChatServer</ProductUri>
   <ApplicationType>Server_0</ApplicationType>
 
   <SecurityConfiguration>
@@ -57,8 +57,8 @@
 
   <ServerConfiguration>
     <BaseAddresses>
-      <ua:String>opc.tcp://localhost:51210/UA/SampleServer</ua:String>
-      <ua:String>https://localhost:51212/UA/SampleServer/</ua:String>
+      <ua:String>opc.tcp://localhost:51210/UA/OpcUaChatServer</ua:String>
+      <ua:String>https://localhost:51212/UA/OpcUaChatServer/</ua:String>
     </BaseAddresses>
 
     <!-- 
@@ -178,25 +178,6 @@
     <MultiCastDnsEnabled>false</MultiCastDnsEnabled>
 
   </ServerConfiguration>
-
-  <Extensions>
-    <ua:XmlElement>
-      <MemoryBufferConfiguration xmlns="http://samples.org/UA/memorybuffer">
-        <Buffers>
-          <MemoryBufferInstance>
-            <Name>UInt32</Name>
-            <TagCount>100</TagCount>
-            <DataType>UInt32</DataType>
-          </MemoryBufferInstance>
-          <MemoryBufferInstance>
-            <Name>Double</Name>
-            <TagCount>100</TagCount>
-            <DataType>Double</DataType>
-          </MemoryBufferInstance>
-        </Buffers>
-      </MemoryBufferConfiguration>
-    </ua:XmlElement>
-  </Extensions>
 
   <TraceConfiguration>
     <OutputFilePath>%LocalApplicationData%/Logs/Opc.Ua.CoreSampleServer.log.txt</OutputFilePath>
