@@ -19,8 +19,8 @@ namespace OpcUaChatServer.Server
             m_chatLogsState = FindPredefinedNode<ChatLogsState>(Objects.ChatLogs);
 
             m_chatLogsState.Post.OnCall = ChatLogsState_Post;
-            m_chatService.Posted += ChatService_Posted_ReportEvent;
-            m_chatService.Posted += ChatService_Posted_PostCount;
+            m_chatService.Posted += ChatService_Posted;
+            m_chatService.PostCountChanged += ChatService_PostCountChanged;
         }
 
         private TNodeState FindPredefinedNode<TNodeState>(uint id)
@@ -36,7 +36,7 @@ namespace OpcUaChatServer.Server
             return ServiceResult.Good;
         }
 
-        private void ChatService_Posted_ReportEvent(Application.ChatLog obj)
+        private void ChatService_Posted(Application.ChatLog obj)
         {
             m_chatLogsState.ClearChangeMasks(SystemContext, true);
 
@@ -65,9 +65,9 @@ namespace OpcUaChatServer.Server
             m_chatLogsState.ReportEvent(SystemContext, e);
         }
 
-        private void ChatService_Posted_PostCount(Application.ChatLog obj)
+        private void ChatService_PostCountChanged(uint obj)
         {
-            m_chatLogsState.PostCount.Value++;
+            m_chatLogsState.PostCount.Value = obj;
         }
     }
 }
