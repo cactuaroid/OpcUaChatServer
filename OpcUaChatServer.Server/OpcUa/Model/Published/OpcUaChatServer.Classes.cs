@@ -91,10 +91,11 @@ namespace OpcUaChatServer
         #region Initialization String
         private const string InitializationString =
            "AQAAAC0AAABodHRwczovL2dpdGh1Yi5jb20vY2FjdHVhcm9pZC9PcGNVYUNoYXRTZXJ2ZXL/////hGCA" +
-           "AgEAAAABABQAAABDaGF0TG9nc1R5cGVJbnN0YW5jZQEBwToBAcE6wToAAAH/////AQAAAARhggoEAAAA" +
+           "AgEAAAABABQAAABDaGF0TG9nc1R5cGVJbnN0YW5jZQEBwToBAcE6wToAAAH/////AgAAAARhggoEAAAA" +
            "AQAEAAAAUG9zdAEBmToALwEBmTqZOgAAAQH/////AQAAABdgqQoCAAAAAAAOAAAASW5wdXRBcmd1bWVu" +
            "dHMBAZo6AC4ARJo6AACWAgAAAAEAKgEBEwAAAAQAAABOYW1lAAz/////AAAAAAABACoBARYAAAAHAAAA" +
-           "Q29udGVudAAM/////wAAAAAAAQAoAQEAAAABAAAAAAAAAAEB/////wAAAAA=";
+           "Q29udGVudAAM/////wAAAAAAAQAoAQEAAAABAAAAAAAAAAEB/////wAAAAAVYIkKAgAAAAEACQAAAFBv" +
+           "c3RDb3VudAEBoToALwA/oToAAAAH/////wEB/////wAAAAA=";
         #endregion
         #endif
         #endregion
@@ -118,6 +119,25 @@ namespace OpcUaChatServer
                 m_postMethod = value;
             }
         }
+
+        /// <remarks />
+        public BaseDataVariableState<uint> PostCount
+        {
+            get
+            {
+                return m_postCount;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_postCount, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_postCount = value;
+            }
+        }
         #endregion
 
         #region Overridden Methods
@@ -133,6 +153,11 @@ namespace OpcUaChatServer
             if (m_postMethod != null)
             {
                 children.Add(m_postMethod);
+            }
+
+            if (m_postCount != null)
+            {
+                children.Add(m_postCount);
             }
 
             base.GetChildren(context, children);
@@ -176,6 +201,27 @@ namespace OpcUaChatServer
                     instance = Post;
                     break;
                 }
+
+                case OpcUaChatServer.BrowseNames.PostCount:
+                {
+                    if (createOrReplace)
+                    {
+                        if (PostCount == null)
+                        {
+                            if (replacement == null)
+                            {
+                                PostCount = new BaseDataVariableState<uint>(this);
+                            }
+                            else
+                            {
+                                PostCount = (BaseDataVariableState<uint>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = PostCount;
+                    break;
+                }
             }
 
             if (instance != null)
@@ -189,6 +235,7 @@ namespace OpcUaChatServer
 
         #region Private Fields
         private PostMethodState m_postMethod;
+        private BaseDataVariableState<uint> m_postCount;
         #endregion
     }
     #endif

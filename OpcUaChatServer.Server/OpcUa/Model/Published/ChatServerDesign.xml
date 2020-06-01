@@ -14,11 +14,12 @@
     <opc:Namespace Name="OpcUaChatServer" Prefix="OpcUaChatServer">https://github.com/cactuaroid/OpcUaChatServer</opc:Namespace>
   </opc:Namespaces>
 
-  <!-- Types -->
+  <!-- ### Types ### -->
 
   <opc:ObjectType SymbolicName="ChatLogsType" BaseType="ua:BaseObjectType" SupportsEvents="true">
     <opc:Children>
       <opc:Method SymbolicName="Post" TypeDefinition="PostMethodType" />
+      <opc:Variable SymbolicName="PostCount" TypeDefinition="ua:BaseDataVariableType" DataType="ua:UInt32" ModellingRule="Mandatory" />
     </opc:Children>
   </opc:ObjectType>
 
@@ -52,8 +53,8 @@
       <opc:Field Name="Content" DataType="ua:String" />
     </opc:Fields>
   </opc:DataType>
-
-  <!--  Objects -->
+  
+  <!--  ### Objects ### -->
   
   <opc:Object SymbolicName="ChatLogs" TypeDefinition="ChatLogsType">
     <opc:References>

@@ -136,6 +136,11 @@ namespace OpcUaChatServer
         public const uint ChatLogsType_Post_InputArguments = 15002;
 
         /// <summary>
+        /// The identifier for the ChatLogsType_PostCount Variable.
+        /// </summary>
+        public const uint ChatLogsType_PostCount = 15009;
+
+        /// <summary>
         /// The identifier for the ChatLogEventType_ChatLog Variable.
         /// </summary>
         public const uint ChatLogEventType_ChatLog = 15055;
@@ -174,6 +179,11 @@ namespace OpcUaChatServer
         /// The identifier for the ChatLogs_Post_InputArguments Variable.
         /// </summary>
         public const uint ChatLogs_Post_InputArguments = 15004;
+
+        /// <summary>
+        /// The identifier for the ChatLogs_PostCount Variable.
+        /// </summary>
+        public const uint ChatLogs_PostCount = 15010;
 
         /// <summary>
         /// The identifier for the OpcUaChatServer_BinarySchema Variable.
@@ -331,6 +341,11 @@ namespace OpcUaChatServer
         public static readonly ExpandedNodeId ChatLogsType_Post_InputArguments = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogsType_Post_InputArguments, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
         /// <summary>
+        /// The identifier for the ChatLogsType_PostCount Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId ChatLogsType_PostCount = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogsType_PostCount, OpcUaChatServer.Namespaces.OpcUaChatServer);
+
+        /// <summary>
         /// The identifier for the ChatLogEventType_ChatLog Variable.
         /// </summary>
         public static readonly ExpandedNodeId ChatLogEventType_ChatLog = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogEventType_ChatLog, OpcUaChatServer.Namespaces.OpcUaChatServer);
@@ -369,6 +384,11 @@ namespace OpcUaChatServer
         /// The identifier for the ChatLogs_Post_InputArguments Variable.
         /// </summary>
         public static readonly ExpandedNodeId ChatLogs_Post_InputArguments = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogs_Post_InputArguments, OpcUaChatServer.Namespaces.OpcUaChatServer);
+
+        /// <summary>
+        /// The identifier for the ChatLogs_PostCount Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId ChatLogs_PostCount = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogs_PostCount, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
         /// <summary>
         /// The identifier for the OpcUaChatServer_BinarySchema Variable.
@@ -488,6 +508,11 @@ namespace OpcUaChatServer
         /// The BrowseName for the Post component.
         /// </summary>
         public const string Post = "Post";
+
+        /// <summary>
+        /// The BrowseName for the PostCount component.
+        /// </summary>
+        public const string PostCount = "PostCount";
     }
     #endregion
 

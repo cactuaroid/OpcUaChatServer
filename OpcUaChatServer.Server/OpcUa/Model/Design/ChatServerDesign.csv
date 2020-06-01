@@ -4,6 +4,8 @@ ChatLogs_Post,15003,Method
 ChatLogs_Post_InputArguments,15004,Variable
 PostMethodType,15005,Method
 PostMethodType_InputArguments,15006,Variable
+ChatLogsType_PostCount,15009,Variable
+ChatLogs_PostCount,15010,Variable
 ChatLogsType,15041,ObjectType
 ChatLogEventType,15044,ObjectType
 ChatLogEventType_EventId,15045,Variable

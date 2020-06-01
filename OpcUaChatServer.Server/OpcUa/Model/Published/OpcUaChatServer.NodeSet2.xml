@@ -49,6 +49,7 @@
     <DisplayName>ChatLogsType</DisplayName>
     <References>
       <Reference ReferenceType="HasComponent">ns=1;i=15001</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=15009</Reference>
       <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
     </References>
   </UAObjectType>
@@ -101,6 +102,14 @@
         </ExtensionObject>
       </ListOfExtensionObject>
     </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15009" BrowseName="1:PostCount" ParentNodeId="ns=1;i=15041" DataType="UInt32">
+    <DisplayName>PostCount</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15041</Reference>
+    </References>
   </UAVariable>
   <UAObjectType NodeId="ns=1;i=15044" BrowseName="1:ChatLogEventType">
     <DisplayName>ChatLogEventType</DisplayName>
@@ -194,6 +203,7 @@
     <DisplayName>ChatLogs</DisplayName>
     <References>
       <Reference ReferenceType="HasComponent">ns=1;i=15003</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=15010</Reference>
       <Reference ReferenceType="Organizes" IsForward="false">i=85</Reference>
       <Reference ReferenceType="HasNotifier" IsForward="false">i=2253</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;i=15041</Reference>
@@ -246,6 +256,13 @@
         </ExtensionObject>
       </ListOfExtensionObject>
     </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15010" BrowseName="1:PostCount" ParentNodeId="ns=1;i=15079" DataType="UInt32">
+    <DisplayName>PostCount</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15079</Reference>
+    </References>
   </UAVariable>
   <UAObject NodeId="ns=1;i=15082" BrowseName="Default Binary" SymbolicName="DefaultBinary">
     <DisplayName>Default Binary</DisplayName>
