@@ -38,8 +38,6 @@ namespace OpcUaChatServer.Server
 
         private void ChatService_Posted(Application.ChatLog obj)
         {
-            m_chatLogsState.ClearChangeMasks(SystemContext, true);
-
             if (!m_chatLogsState.AreEventsMonitored) { return; }
 
             // compose an event data
@@ -68,6 +66,9 @@ namespace OpcUaChatServer.Server
         private void ChatService_PostCountChanged(uint obj)
         {
             m_chatLogsState.PostCount.Value = obj;
+
+            // updates to source finished - report changes to monitored items.
+            m_chatLogsState.ClearChangeMasks(SystemContext, true);
         }
     }
 }
