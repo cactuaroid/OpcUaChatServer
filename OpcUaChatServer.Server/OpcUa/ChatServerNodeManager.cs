@@ -52,6 +52,9 @@ namespace OpcUaChatServer.Server
     /// </summary>
     public partial class ChatServerNodeManager : CustomNodeManager2
     {
+        [Import]
+        private ChatService m_chatService = null;
+
         #region Constructors
         /// <summary>
         /// Initializes the node manager.
@@ -72,8 +75,9 @@ namespace OpcUaChatServer.Server
 
             m_lastUsedId = 0;
 
-            // update the default context.
-            //SystemContext.SystemHandle = m_chatService;
+            // Set ChatService instance as SystemHandle so that
+            // methods of the nodes can easily access it via given ISystemContext.
+            SystemContext.SystemHandle = m_chatService;
         }
         #endregion
 

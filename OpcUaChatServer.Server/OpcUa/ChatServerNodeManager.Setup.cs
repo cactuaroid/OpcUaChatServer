@@ -9,9 +9,6 @@ namespace OpcUaChatServer.Server
 {
     public partial class ChatServerNodeManager
     {
-        [Import]
-        private ChatService m_chatService = null;
-
         private ChatLogsState m_chatLogsState;
 
         private void SetupNodes()
