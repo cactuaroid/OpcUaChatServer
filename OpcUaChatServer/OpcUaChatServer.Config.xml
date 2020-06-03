@@ -186,7 +186,7 @@ https://github.com/OPCFoundation/UA-.NETStandard/blob/master/Stack/Opc.Ua.Core/S
   </ServerConfiguration>
 
   <TraceConfiguration>
-    <OutputFilePath>%LocalApplicationData%/Logs/Opc.Ua.CoreSampleServer.log.txt</OutputFilePath>
+    <OutputFilePath>%LocalApplicationData%/Logs/OpcUaChatServer.log.txt</OutputFilePath>
     <DeleteOnLoad>true</DeleteOnLoad>
     <!-- Show Only Security, Errors and StartStop-->
     <TraceMasks>641</TraceMasks>

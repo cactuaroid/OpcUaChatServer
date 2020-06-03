@@ -130,9 +130,9 @@ namespace OpcUaChatServer
         {
             ApplicationInstance application = new ApplicationInstance();
 
-            application.ApplicationName = "UA Core Sample Server";
+            application.ApplicationName = "OpcUaChatServer";
             application.ApplicationType = ApplicationType.Server;
-            application.ConfigSectionName = Utils.IsRunningOnMono() ? "Opc.Ua.MonoSampleServer" : "Opc.Ua.SampleServer";
+            application.ConfigSectionName = "OpcUaChatServer";
 
             // load the application configuration.
             ApplicationConfiguration config = await application.LoadApplicationConfiguration(false);
