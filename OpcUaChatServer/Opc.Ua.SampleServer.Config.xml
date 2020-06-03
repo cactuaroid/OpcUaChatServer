@@ -1,4 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Find document comments here
+https://github.com/OPCFoundation/UA-.NETStandard/blob/master/Stack/Opc.Ua.Core/Schema/ApplicationConfiguration.cs
+-->
+
 <ApplicationConfiguration
   xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd"
   xmlns="http://opcfoundation.org/UA/SDK/Configuration.xsd"
@@ -182,6 +188,8 @@
   <TraceConfiguration>
     <OutputFilePath>%LocalApplicationData%/Logs/Opc.Ua.CoreSampleServer.log.txt</OutputFilePath>
     <DeleteOnLoad>true</DeleteOnLoad>
+    <!-- Show Only Security, Errors and StartStop-->
+    <TraceMasks>641</TraceMasks>
     <!-- Show Only Errors -->
     <!-- <TraceMasks>1</TraceMasks> -->
     <!-- Show Only Security and Errors -->
