@@ -38,6 +38,8 @@ using OpcUaChatServer.Server.Application;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Diagnostics;
+using System.IO;
+using System.Reflection;
 
 namespace OpcUaChatServer.Server
 {
@@ -118,14 +120,15 @@ namespace OpcUaChatServer.Server
         /// </remarks>
         protected override ServerProperties LoadServerProperties()
         {
+            var thisAssembly = GetType().Assembly;
             ServerProperties properties = new ServerProperties();
 
             properties.ManufacturerName = "cactuaroid";
             properties.ProductName      = "OpcUaChatServer";
             properties.ProductUri       = "https://github.com/cactuaroid/OpcUaChatServer";
-            properties.SoftwareVersion  = Utils.GetAssemblySoftwareVersion();
-            properties.BuildNumber      = Utils.GetAssemblyBuildNumber();
-            properties.BuildDate        = Utils.GetAssemblyTimestamp();
+            properties.SoftwareVersion  = thisAssembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion;
+            properties.BuildNumber      = thisAssembly.GetCustomAttribute<AssemblyFileVersionAttribute>().Version;
+            properties.BuildDate        = File.GetLastWriteTimeUtc(thisAssembly.Location);
 
             // TBD - All applications have software certificates that need to added to the properties.
 
