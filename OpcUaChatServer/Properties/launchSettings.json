@@ -1,8 +1,7 @@
 {
   "profiles": {
     "OpcUaChatServer": {
-      "commandName": "Project",
-      "commandLineArgs": "-a"
+      "commandName": "Project"
     }
   }
 }

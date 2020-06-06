@@ -33,6 +33,7 @@
 using OpcUaChatServer.Server;
 using System;
 using System.ComponentModel.Composition;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace OpcUaChatServer
@@ -46,7 +47,7 @@ namespace OpcUaChatServer
 
             // command line options
             int stopTimeout = 0;
-            bool autoAccept = (args[0] == "-a");
+            bool autoAccept = args.Contains("-a");
 
             ServerLauncher server = new ServerLauncher(autoAccept, stopTimeout);
             server.Run();
