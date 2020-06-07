@@ -1,11 +1,11 @@
 # About
 Chat server as an practical simple OPC UA server sample in C# .NET Core Console App. This is based on samples of [UA-.NETStandard](https://github.com/OPCFoundation/UA-.NETStandard), but much simple and uses NuGet package of it.
 
-|Node Name|Node Class|Description|
-||||
+|Node|NodeClass|Description|
+|-|-|-|
 |ChatLogs|Object|Subscribe ChatLogEventType of this node for getting posted messages as event.|
-|Post|Method|Call this method to post a message.|
-|PostCount|Variable|Increments when Post method is called.|
+|+-- Post|Method|Call this method to post a message.|
+|+-- PostCount|Variable|Increments when Post method is called.|
 
 Specifying `-a` for command line parameter, the server accepts unknown client certificates for test purpose, same as official sample.
 
