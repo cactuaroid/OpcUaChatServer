@@ -119,6 +119,9 @@ namespace OpcUaChatServer.Server
         /// </summary>
         protected override NodeStateCollection LoadPredefinedNodes(ISystemContext context)
         {
+            // Set your .uanodes file to Build Action = Embedded Resource
+            // resourcePath parameter of LoadFromBinaryResource() is project name + directory + file name
+
             NodeStateCollection predefinedNodes = new NodeStateCollection();
             predefinedNodes.LoadFromBinaryResource(context, "OpcUaChatServer.Server." + "OpcUa.Model.Published." + "OpcUaChatServer.PredefinedNodes.uanodes", this.GetType().GetTypeInfo().Assembly, true);
             return predefinedNodes;
@@ -145,6 +148,8 @@ namespace OpcUaChatServer.Server
 
             switch ((uint)typeId.Identifier)
             {
+                // Write cases in same way for all defined ObjectTypes
+
                 case ObjectTypes.ChatLogsType:
                     {
                         if (passiveNode is ChatLogsState)
