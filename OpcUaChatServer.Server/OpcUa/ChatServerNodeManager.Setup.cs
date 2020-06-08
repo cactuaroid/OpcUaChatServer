@@ -64,7 +64,8 @@ namespace OpcUaChatServer.Server
         {
             m_chatLogsState.PostCount.Value = obj;
 
-            // updates to source finished - report changes to monitored items.
+            // ClearChangeMasks() does not only clear change masks but also reports changes to monitored items.
+            // enum NodeStateChangeMasks: Indicates what has changed in a node.
             m_chatLogsState.ClearChangeMasks(SystemContext, true);
         }
     }
