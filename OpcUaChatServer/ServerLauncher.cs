@@ -137,8 +137,8 @@ namespace OpcUaChatServer
             // load the application configuration.
             ApplicationConfiguration config = await application.LoadApplicationConfiguration(false);
 
-            // check the application certificate.
-            bool haveAppCertificate = await application.CheckApplicationInstanceCertificate(false, 0, ushort.MaxValue);
+            // check the application certificate and create if not available.
+            bool haveAppCertificate = await application.CheckApplicationInstanceCertificate(false, 0, ushort.MaxValue); // almost unlimited
             if (!haveAppCertificate)
             {
                 throw new Exception("Application instance certificate invalid!");
