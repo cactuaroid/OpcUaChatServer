@@ -114,7 +114,7 @@
   <UAObjectType NodeId="ns=1;i=15044" BrowseName="1:ChatLogEventType">
     <DisplayName>ChatLogEventType</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent">ns=1;i=15055</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15055</Reference>
       <Reference ReferenceType="HasSubtype" IsForward="false">i=2041</Reference>
     </References>
   </UAObjectType>
@@ -126,7 +126,7 @@
       <Reference ReferenceType="HasComponent">ns=1;i=15073</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;i=15074</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15044</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15044</Reference>
     </References>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=15071" BrowseName="1:At" ParentNodeId="ns=1;i=15055" DataType="DateTime">

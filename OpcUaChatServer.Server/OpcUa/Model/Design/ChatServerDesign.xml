@@ -32,7 +32,7 @@
 
   <opc:ObjectType SymbolicName="ChatLogEventType" BaseType="ua:BaseEventType">
     <opc:Children>
-      <opc:Variable SymbolicName="ChatLog" TypeDefinition="ChatLogType" />
+      <opc:Property SymbolicName="ChatLog" TypeDefinition="ChatLogType" />
     </opc:Children>
   </opc:ObjectType>
 

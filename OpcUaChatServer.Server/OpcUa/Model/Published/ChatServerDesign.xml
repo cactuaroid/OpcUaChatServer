@@ -14,7 +14,7 @@
     <opc:Namespace Name="OpcUaChatServer" Prefix="OpcUaChatServer">https://github.com/cactuaroid/OpcUaChatServer</opc:Namespace>
   </opc:Namespaces>
 
-  <!-- ### Types ### -->
+  <!-- Types -->
 
   <opc:ObjectType SymbolicName="ChatLogsType" BaseType="ua:BaseObjectType" SupportsEvents="true">
     <opc:Children>
@@ -32,7 +32,7 @@
 
   <opc:ObjectType SymbolicName="ChatLogEventType" BaseType="ua:BaseEventType">
     <opc:Children>
-      <opc:Variable SymbolicName="ChatLog" TypeDefinition="ChatLogType" />
+      <opc:Property SymbolicName="ChatLog" TypeDefinition="ChatLogType" />
     </opc:Children>
   </opc:ObjectType>
 
@@ -54,7 +54,7 @@
     </opc:Fields>
   </opc:DataType>
   
-  <!--  ### Objects ### -->
+  <!--  Objects -->
   
   <opc:Object SymbolicName="ChatLogs" TypeDefinition="ChatLogsType">
     <opc:References>
