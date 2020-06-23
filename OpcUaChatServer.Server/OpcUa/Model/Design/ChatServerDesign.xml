@@ -24,6 +24,12 @@
   </opc:ObjectType>
 
   <opc:Method SymbolicName="PostMethodType">
+    <opc:References>
+      <opc:Reference>
+        <opc:ReferenceType>ua:AlwaysGeneratesEvent</opc:ReferenceType>
+        <opc:TargetId>ChatLogEventType</opc:TargetId>
+      </opc:Reference>
+    </opc:References>
     <opc:InputArguments>
       <opc:Argument Name="Name" DataType="ua:String" />
       <opc:Argument Name="Content" DataType="ua:String" />
@@ -53,9 +59,9 @@
       <opc:Field Name="Content" DataType="ua:String" />
     </opc:Fields>
   </opc:DataType>
-  
+
   <!--  Objects -->
-  
+
   <opc:Object SymbolicName="ChatLogs" TypeDefinition="ChatLogsType">
     <opc:References>
       <opc:Reference IsInverse="true">

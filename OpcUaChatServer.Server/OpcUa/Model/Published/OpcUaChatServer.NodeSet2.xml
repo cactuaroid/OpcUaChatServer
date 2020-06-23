@@ -57,6 +57,7 @@
     <DisplayName>Post</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15002</Reference>
+      <Reference ReferenceType="i=3065">ns=1;i=15044</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15041</Reference>
     </References>
@@ -213,6 +214,7 @@
     <DisplayName>Post</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15004</Reference>
+      <Reference ReferenceType="i=3065">ns=1;i=15044</Reference>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15079</Reference>
     </References>
   </UAMethod>

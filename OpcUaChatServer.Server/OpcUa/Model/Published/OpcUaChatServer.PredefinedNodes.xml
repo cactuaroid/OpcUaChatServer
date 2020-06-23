@@ -36,6 +36,16 @@
       <uax:NumericId>15001</uax:NumericId>
       <uax:Executable>true</uax:Executable>
       <uax:UserExecutable>true</uax:UserExecutable>
+      <uax:References>
+        <uax:Reference>
+          <uax:ReferenceTypeId>
+            <uax:Identifier>i=3065</uax:Identifier>
+          </uax:ReferenceTypeId>
+          <uax:TargetId>
+            <uax:Identifier>ns=1;i=15044</uax:Identifier>
+          </uax:TargetId>
+        </uax:Reference>
+      </uax:References>
       <InputArguments xmlns="http://opcfoundation.org/UA/">
         <uax:NodeClass>Variable_2</uax:NodeClass>
         <uax:NodeId>
@@ -460,6 +470,16 @@
       <uax:NumericId>15003</uax:NumericId>
       <uax:Executable>true</uax:Executable>
       <uax:UserExecutable>true</uax:UserExecutable>
+      <uax:References>
+        <uax:Reference>
+          <uax:ReferenceTypeId>
+            <uax:Identifier>i=3065</uax:Identifier>
+          </uax:ReferenceTypeId>
+          <uax:TargetId>
+            <uax:Identifier>ns=1;i=15044</uax:Identifier>
+          </uax:TargetId>
+        </uax:Reference>
+      </uax:References>
       <InputArguments xmlns="http://opcfoundation.org/UA/">
         <uax:NodeClass>Variable_2</uax:NodeClass>
         <uax:NodeId>
