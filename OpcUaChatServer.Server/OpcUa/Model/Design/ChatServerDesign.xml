@@ -18,7 +18,7 @@
 
   <opc:ObjectType SymbolicName="ChatLogsType" BaseType="ua:BaseObjectType" SupportsEvents="true">
     <opc:Children>
-      <opc:Method SymbolicName="Post" TypeDefinition="PostMethodType" />
+      <opc:Method SymbolicName="Post" TypeDefinition="PostMethodType" ModellingRule="Mandatory" />
       <opc:Variable SymbolicName="PostCount" TypeDefinition="ua:BaseDataVariableType" DataType="ua:UInt32" ModellingRule="Mandatory" />
     </opc:Children>
   </opc:ObjectType>
@@ -38,17 +38,12 @@
 
   <opc:ObjectType SymbolicName="ChatLogEventType" BaseType="ua:BaseEventType">
     <opc:Children>
-      <opc:Property SymbolicName="ChatLog" TypeDefinition="ChatLogType" />
+      <opc:Property SymbolicName="ChatLog" TypeDefinition="ChatLogType" ModellingRule="Mandatory" />
     </opc:Children>
   </opc:ObjectType>
 
-  <opc:VariableType SymbolicName="ChatLogType" DataType="ChatLog" BaseType="ua:BaseDataVariableType" ValueRank="Scalar" ExposesItsChildren="true">
+  <opc:VariableType SymbolicName="ChatLogType" DataType="ChatLog" BaseType="ua:BaseDataVariableType" ValueRank="Scalar">
     <opc:Description>Represents a chat log</opc:Description>
-    <opc:Children>
-      <opc:Variable SymbolicName="At" TypeDefinition="ua:BaseDataVariableType" DataType="ua:DateTime" ModellingRule="Mandatory" />
-      <opc:Variable SymbolicName="Name" TypeDefinition="ua:BaseDataVariableType" DataType="ua:String" ModellingRule="Mandatory" />
-      <opc:Variable SymbolicName="Content" TypeDefinition="ua:BaseDataVariableType" DataType="ua:String" ModellingRule="Mandatory" />
-    </opc:Children>
   </opc:VariableType>
 
   <opc:DataType SymbolicName="ChatLog" BaseType="ua:Structure">

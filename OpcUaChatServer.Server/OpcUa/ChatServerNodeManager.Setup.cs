@@ -50,12 +50,10 @@ namespace OpcUaChatServer.Server
                 EventSeverity.MediumLow,
                 new LocalizedText(message));
             e.ChatLog = new ChatLogState(e);
-            e.ChatLog.At = new BaseDataVariableState<DateTime>(e.ChatLog);
-            e.ChatLog.At.Value = obj.At;
-            e.ChatLog.Name = new BaseDataVariableState<string>(e.ChatLog);
-            e.ChatLog.Name.Value = obj.Name;
-            e.ChatLog.Content = new BaseDataVariableState<string>(e.ChatLog);
-            e.ChatLog.Content.Value = obj.Content;
+            e.ChatLog.Value = new ChatLog();
+            e.ChatLog.Value.At = obj.At;
+            e.ChatLog.Value.Name = obj.Name;
+            e.ChatLog.Value.Content = obj.Content;
 
             m_chatLogsState.ReportEvent(SystemContext, e);
         }

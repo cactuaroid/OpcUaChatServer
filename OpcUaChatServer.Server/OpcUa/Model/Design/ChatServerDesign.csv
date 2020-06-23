@@ -18,13 +18,7 @@ ChatLogEventType_LocalTime,15052,Variable
 ChatLogEventType_Message,15053,Variable
 ChatLogEventType_Severity,15054,Variable
 ChatLogEventType_ChatLog,15055,Variable
-ChatLogEventType_ChatLog_At,15071,Variable
-ChatLogEventType_ChatLog_Name,15072,Variable
-ChatLogEventType_ChatLog_Content,15073,Variable
 ChatLogType,15074,VariableType
-ChatLogType_At,15075,Variable
-ChatLogType_Name,15076,Variable
-ChatLogType_Content,15077,Variable
 ChatLog,15078,DataType
 ChatLogs,15079,Object
 ChatLog_Encoding_DefaultBinary,15082,Object

@@ -122,72 +122,18 @@
   <UAVariable NodeId="ns=1;i=15055" BrowseName="1:ChatLog" ParentNodeId="ns=1;i=15044" DataType="ns=1;i=15078">
     <DisplayName>ChatLog</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent">ns=1;i=15071</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=15072</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=15073</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;i=15074</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15044</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=15071" BrowseName="1:At" ParentNodeId="ns=1;i=15055" DataType="DateTime">
-    <DisplayName>At</DisplayName>
-    <References>
-      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15055</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=15072" BrowseName="1:Name" ParentNodeId="ns=1;i=15055" DataType="String">
-    <DisplayName>Name</DisplayName>
-    <References>
-      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15055</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=15073" BrowseName="1:Content" ParentNodeId="ns=1;i=15055" DataType="String">
-    <DisplayName>Content</DisplayName>
-    <References>
-      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15055</Reference>
     </References>
   </UAVariable>
   <UAVariableType NodeId="ns=1;i=15074" BrowseName="1:ChatLogType" DataType="ns=1;i=15078">
     <DisplayName>ChatLogType</DisplayName>
     <Description>Represents a chat log</Description>
     <References>
-      <Reference ReferenceType="HasComponent">ns=1;i=15075</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=15076</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=15077</Reference>
       <Reference ReferenceType="HasSubtype" IsForward="false">i=63</Reference>
     </References>
   </UAVariableType>
-  <UAVariable NodeId="ns=1;i=15075" BrowseName="1:At" ParentNodeId="ns=1;i=15074" DataType="DateTime">
-    <DisplayName>At</DisplayName>
-    <References>
-      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15074</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=15076" BrowseName="1:Name" ParentNodeId="ns=1;i=15074" DataType="String">
-    <DisplayName>Name</DisplayName>
-    <References>
-      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15074</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=15077" BrowseName="1:Content" ParentNodeId="ns=1;i=15074" DataType="String">
-    <DisplayName>Content</DisplayName>
-    <References>
-      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15074</Reference>
-    </References>
-  </UAVariable>
   <UADataType NodeId="ns=1;i=15078" BrowseName="1:ChatLog">
     <DisplayName>ChatLog</DisplayName>
     <Description>A chat log</Description>

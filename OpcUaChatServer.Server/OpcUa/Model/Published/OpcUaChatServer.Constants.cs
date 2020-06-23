@@ -146,36 +146,6 @@ namespace OpcUaChatServer
         public const uint ChatLogEventType_ChatLog = 15055;
 
         /// <summary>
-        /// The identifier for the ChatLogEventType_ChatLog_At Variable.
-        /// </summary>
-        public const uint ChatLogEventType_ChatLog_At = 15071;
-
-        /// <summary>
-        /// The identifier for the ChatLogEventType_ChatLog_Name Variable.
-        /// </summary>
-        public const uint ChatLogEventType_ChatLog_Name = 15072;
-
-        /// <summary>
-        /// The identifier for the ChatLogEventType_ChatLog_Content Variable.
-        /// </summary>
-        public const uint ChatLogEventType_ChatLog_Content = 15073;
-
-        /// <summary>
-        /// The identifier for the ChatLogType_At Variable.
-        /// </summary>
-        public const uint ChatLogType_At = 15075;
-
-        /// <summary>
-        /// The identifier for the ChatLogType_Name Variable.
-        /// </summary>
-        public const uint ChatLogType_Name = 15076;
-
-        /// <summary>
-        /// The identifier for the ChatLogType_Content Variable.
-        /// </summary>
-        public const uint ChatLogType_Content = 15077;
-
-        /// <summary>
         /// The identifier for the ChatLogs_Post_InputArguments Variable.
         /// </summary>
         public const uint ChatLogs_Post_InputArguments = 15004;
@@ -351,36 +321,6 @@ namespace OpcUaChatServer
         public static readonly ExpandedNodeId ChatLogEventType_ChatLog = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogEventType_ChatLog, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
         /// <summary>
-        /// The identifier for the ChatLogEventType_ChatLog_At Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId ChatLogEventType_ChatLog_At = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogEventType_ChatLog_At, OpcUaChatServer.Namespaces.OpcUaChatServer);
-
-        /// <summary>
-        /// The identifier for the ChatLogEventType_ChatLog_Name Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId ChatLogEventType_ChatLog_Name = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogEventType_ChatLog_Name, OpcUaChatServer.Namespaces.OpcUaChatServer);
-
-        /// <summary>
-        /// The identifier for the ChatLogEventType_ChatLog_Content Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId ChatLogEventType_ChatLog_Content = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogEventType_ChatLog_Content, OpcUaChatServer.Namespaces.OpcUaChatServer);
-
-        /// <summary>
-        /// The identifier for the ChatLogType_At Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId ChatLogType_At = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogType_At, OpcUaChatServer.Namespaces.OpcUaChatServer);
-
-        /// <summary>
-        /// The identifier for the ChatLogType_Name Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId ChatLogType_Name = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogType_Name, OpcUaChatServer.Namespaces.OpcUaChatServer);
-
-        /// <summary>
-        /// The identifier for the ChatLogType_Content Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId ChatLogType_Content = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogType_Content, OpcUaChatServer.Namespaces.OpcUaChatServer);
-
-        /// <summary>
         /// The identifier for the ChatLogs_Post_InputArguments Variable.
         /// </summary>
         public static readonly ExpandedNodeId ChatLogs_Post_InputArguments = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogs_Post_InputArguments, OpcUaChatServer.Namespaces.OpcUaChatServer);
@@ -455,11 +395,6 @@ namespace OpcUaChatServer
     public static partial class BrowseNames
     {
         /// <summary>
-        /// The BrowseName for the At component.
-        /// </summary>
-        public const string At = "At";
-
-        /// <summary>
         /// The BrowseName for the ChatLog component.
         /// </summary>
         public const string ChatLog = "ChatLog";
@@ -483,16 +418,6 @@ namespace OpcUaChatServer
         /// The BrowseName for the ChatLogType component.
         /// </summary>
         public const string ChatLogType = "ChatLogType";
-
-        /// <summary>
-        /// The BrowseName for the Content component.
-        /// </summary>
-        public const string Content = "Content";
-
-        /// <summary>
-        /// The BrowseName for the Name component.
-        /// </summary>
-        public const string Name = "Name";
 
         /// <summary>
         /// The BrowseName for the OpcUaChatServer_BinarySchema component.
