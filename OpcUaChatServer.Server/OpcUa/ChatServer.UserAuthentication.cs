@@ -33,7 +33,6 @@
 using Opc.Ua;
 using Opc.Ua.Server;
 using System;
-using System.IdentityModel.Selectors;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml;
 
@@ -177,7 +176,7 @@ namespace OpcUaChatServer.Server
         #endregion
         
         #region Private Fields
-        private X509CertificateValidator m_certificateValidator;
+        private ICertificateValidator m_certificateValidator;
         #endregion 
     }
 }
