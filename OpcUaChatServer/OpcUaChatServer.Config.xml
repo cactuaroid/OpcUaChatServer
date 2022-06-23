@@ -44,7 +44,7 @@ https://github.com/OPCFoundation/UA-.NETStandard/blob/master/Stack/Opc.Ua.Core/S
 
     <!-- WARNING: The following setting (to automatically accept untrusted certificates) should be used
     for easy debugging purposes ONLY and turned off for production deployments! -->
-    <AutoAcceptUntrustedCertificates>false</AutoAcceptUntrustedCertificates>
+    <AutoAcceptUntrustedCertificates>true</AutoAcceptUntrustedCertificates>
 
   </SecurityConfiguration>
 
