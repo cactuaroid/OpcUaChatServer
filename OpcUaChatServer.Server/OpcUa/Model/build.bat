@@ -6,8 +6,7 @@ pushd .
 cd %ThisDir%
 
 :: Source design files
-::set Design=%ThisDir%Design\ChatServerDesign
-set Design=%ThisDir%Design\ChatDesign
+set Design=%ThisDir%Design\ChatServerDesign
 set DesignXml=%Design%.xml
 set DesignCsv=%Design%.csv
 
