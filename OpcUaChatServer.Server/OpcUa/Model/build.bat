@@ -18,7 +18,7 @@ if not exist %DesignXml% (
 )
 
 :: Before run this script, download https://github.com/OPCFoundation/UA-ModelCompiler and build in 'Release'.
-set ModelCompiler=..\..\..\..\UA-ModelCompiler\bin\Release\Opc.Ua.ModelCompiler.exe
+set ModelCompiler=..\..\..\..\UA-ModelCompiler\build\bin\Release\net6.0\Opc.Ua.ModelCompiler.exe
 if not exist %ModelCompiler% (
    echo "%ModelCompiler%" is not found.
    pause
@@ -31,8 +31,8 @@ if not exist %PublishedDir% (
 )
 
 :: See https://github.com/OPCFoundation/UA-ModelCompiler/blob/master/Opc.Ua.ModelCompiler/HelpFile.txt
-echo %ModelCompiler% -console -version v104 -d2 "%DesignXml%" -cg "%DesignCsv%" -o2 "%PublishedDir%"
-%ModelCompiler% -console -version v104 -d2 "%DesignXml%" -cg "%DesignCsv%" -o2 "%PublishedDir%"
+echo %ModelCompiler% compile -d2 "%DesignXml%" -cg "%DesignCsv%" -o2 "%PublishedDir%"
+%ModelCompiler% compile -d2 "%DesignXml%" -cg "%DesignCsv%" -o2 "%PublishedDir%"
 if %ERRORLEVEL% NEQ 0 (
    echo Failed.
    pause
