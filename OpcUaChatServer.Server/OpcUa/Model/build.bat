@@ -6,7 +6,8 @@ pushd .
 cd %ThisDir%
 
 :: Source design files
-set Design=%ThisDir%Design\ChatServerDesign
+::set Design=%ThisDir%Design\ChatServerDesign
+set Design=%ThisDir%Design\ChatDesign
 set DesignXml=%Design%.xml
 set DesignCsv=%Design%.csv
 
@@ -30,7 +31,7 @@ if not exist %PublishedDir% (
     mkdir %PublishedDir%
 )
 
-:: See https://github.com/OPCFoundation/UA-ModelCompiler/blob/master/ModelCompiler/HelpFile.txt
+:: See https://github.com/OPCFoundation/UA-ModelCompiler/blob/master/Opc.Ua.ModelCompiler/HelpFile.txt
 echo %ModelCompiler% -console -version v104 -d2 "%DesignXml%" -cg "%DesignCsv%" -o2 "%PublishedDir%"
 %ModelCompiler% -console -version v104 -d2 "%DesignXml%" -cg "%DesignCsv%" -o2 "%PublishedDir%"
 if %ERRORLEVEL% NEQ 0 (
