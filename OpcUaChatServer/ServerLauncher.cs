@@ -137,6 +137,10 @@ namespace OpcUaChatServer
             // load the application configuration.
             ApplicationConfiguration config = await application.LoadApplicationConfiguration(false);
 
+            // https://github.com/OPCFoundation/UA-ModelCompiler/issues/109
+            // add the encodable types defined in the shared information model library.
+            application.ApplicationConfiguration.CreateMessageContext().Factory.AddEncodeableTypes(typeof(Namespaces).Assembly);
+
             // check the application certificate and create if not available.
             bool haveAppCertificate = await application.CheckApplicationInstanceCertificate(false, 0, ushort.MaxValue); // almost unlimited
             if (!haveAppCertificate)
