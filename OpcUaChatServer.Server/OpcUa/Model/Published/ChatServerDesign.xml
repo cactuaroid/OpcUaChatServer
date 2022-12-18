@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!-- load schema file "UA-ModelCompiler\Opc.Ua.ModelCompiler\UA Model Design.xsd" to your editor for getting help -->
+
 <opc:ModelDesign
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"

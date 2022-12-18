@@ -1,5 +1,5 @@
 /* ========================================================================
- * Copyright (c) 2005-2019 The OPC Foundation, Inc. All rights reserved.
+ * Copyright (c) 2005-2021 The OPC Foundation, Inc. All rights reserved.
  *
  * OPC Foundation MIT License 1.00
  *
@@ -38,413 +38,275 @@ using Opc.Ua;
 namespace OpcUaChatServer
 {
     #region DataType Identifiers
-    /// <summary>
-    /// A class that declares constants for all DataTypes in the Model Design.
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class DataTypes
     {
-        /// <summary>
-        /// The identifier for the ChatLog DataType.
-        /// </summary>
-        public const uint ChatLog = 15078;
+        /// <remarks />
+        public const uint ChatLog = 19;
     }
     #endregion
 
     #region Method Identifiers
-    /// <summary>
-    /// A class that declares constants for all Methods in the Model Design.
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class Methods
     {
-        /// <summary>
-        /// The identifier for the ChatLogsType_Post Method.
-        /// </summary>
-        public const uint ChatLogsType_Post = 15001;
+        /// <remarks />
+        public const uint ChatLogsType_Post = 2;
 
-        /// <summary>
-        /// The identifier for the ChatLogs_Post Method.
-        /// </summary>
-        public const uint ChatLogs_Post = 15003;
+        /// <remarks />
+        public const uint ChatLogs_Post = 21;
     }
     #endregion
 
     #region Object Identifiers
-    /// <summary>
-    /// A class that declares constants for all Objects in the Model Design.
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class Objects
     {
-        /// <summary>
-        /// The identifier for the ChatLogs Object.
-        /// </summary>
-        public const uint ChatLogs = 15079;
+        /// <remarks />
+        public const uint ChatLogs = 20;
 
-        /// <summary>
-        /// The identifier for the ChatLog_Encoding_DefaultBinary Object.
-        /// </summary>
-        public const uint ChatLog_Encoding_DefaultBinary = 15082;
+        /// <remarks />
+        public const uint ChatLog_Encoding_DefaultBinary = 24;
 
-        /// <summary>
-        /// The identifier for the ChatLog_Encoding_DefaultXml Object.
-        /// </summary>
-        public const uint ChatLog_Encoding_DefaultXml = 15090;
+        /// <remarks />
+        public const uint ChatLog_Encoding_DefaultXml = 32;
 
-        /// <summary>
-        /// The identifier for the ChatLog_Encoding_DefaultJson Object.
-        /// </summary>
-        public const uint ChatLog_Encoding_DefaultJson = 15098;
+        /// <remarks />
+        public const uint ChatLog_Encoding_DefaultJson = 40;
     }
     #endregion
 
     #region ObjectType Identifiers
-    /// <summary>
-    /// A class that declares constants for all ObjectTypes in the Model Design.
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class ObjectTypes
     {
-        /// <summary>
-        /// The identifier for the ChatLogsType ObjectType.
-        /// </summary>
-        public const uint ChatLogsType = 15041;
+        /// <remarks />
+        public const uint ChatLogsType = 1;
 
-        /// <summary>
-        /// The identifier for the ChatLogEventType ObjectType.
-        /// </summary>
-        public const uint ChatLogEventType = 15044;
+        /// <remarks />
+        public const uint ChatLogEventType = 7;
     }
     #endregion
 
     #region Variable Identifiers
-    /// <summary>
-    /// A class that declares constants for all Variables in the Model Design.
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class Variables
     {
-        /// <summary>
-        /// The identifier for the ChatLogsType_Post_InputArguments Variable.
-        /// </summary>
-        public const uint ChatLogsType_Post_InputArguments = 15002;
+        /// <remarks />
+        public const uint ChatLogsType_Post_InputArguments = 3;
 
-        /// <summary>
-        /// The identifier for the ChatLogsType_PostCount Variable.
-        /// </summary>
-        public const uint ChatLogsType_PostCount = 15009;
+        /// <remarks />
+        public const uint ChatLogsType_PostCount = 4;
 
-        /// <summary>
-        /// The identifier for the ChatLogEventType_ChatLog Variable.
-        /// </summary>
-        public const uint ChatLogEventType_ChatLog = 15055;
+        /// <remarks />
+        public const uint ChatLogEventType_ChatLog = 17;
 
-        /// <summary>
-        /// The identifier for the ChatLogs_Post_InputArguments Variable.
-        /// </summary>
-        public const uint ChatLogs_Post_InputArguments = 15004;
+        /// <remarks />
+        public const uint ChatLogs_Post_InputArguments = 22;
 
-        /// <summary>
-        /// The identifier for the ChatLogs_PostCount Variable.
-        /// </summary>
-        public const uint ChatLogs_PostCount = 15010;
+        /// <remarks />
+        public const uint ChatLogs_PostCount = 23;
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_BinarySchema Variable.
-        /// </summary>
-        public const uint OpcUaChatServer_BinarySchema = 15083;
+        /// <remarks />
+        public const uint OpcUaChatServer_BinarySchema = 25;
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_BinarySchema_NamespaceUri Variable.
-        /// </summary>
-        public const uint OpcUaChatServer_BinarySchema_NamespaceUri = 15085;
+        /// <remarks />
+        public const uint OpcUaChatServer_BinarySchema_NamespaceUri = 27;
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_BinarySchema_Deprecated Variable.
-        /// </summary>
-        public const uint OpcUaChatServer_BinarySchema_Deprecated = 15086;
+        /// <remarks />
+        public const uint OpcUaChatServer_BinarySchema_Deprecated = 28;
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_BinarySchema_ChatLog Variable.
-        /// </summary>
-        public const uint OpcUaChatServer_BinarySchema_ChatLog = 15087;
+        /// <remarks />
+        public const uint OpcUaChatServer_BinarySchema_ChatLog = 29;
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_XmlSchema Variable.
-        /// </summary>
-        public const uint OpcUaChatServer_XmlSchema = 15091;
+        /// <remarks />
+        public const uint OpcUaChatServer_XmlSchema = 33;
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_XmlSchema_NamespaceUri Variable.
-        /// </summary>
-        public const uint OpcUaChatServer_XmlSchema_NamespaceUri = 15093;
+        /// <remarks />
+        public const uint OpcUaChatServer_XmlSchema_NamespaceUri = 35;
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_XmlSchema_Deprecated Variable.
-        /// </summary>
-        public const uint OpcUaChatServer_XmlSchema_Deprecated = 15094;
+        /// <remarks />
+        public const uint OpcUaChatServer_XmlSchema_Deprecated = 36;
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_XmlSchema_ChatLog Variable.
-        /// </summary>
-        public const uint OpcUaChatServer_XmlSchema_ChatLog = 15095;
+        /// <remarks />
+        public const uint OpcUaChatServer_XmlSchema_ChatLog = 37;
     }
     #endregion
 
     #region VariableType Identifiers
-    /// <summary>
-    /// A class that declares constants for all VariableTypes in the Model Design.
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class VariableTypes
     {
-        /// <summary>
-        /// The identifier for the ChatLogType VariableType.
-        /// </summary>
-        public const uint ChatLogType = 15074;
+        /// <remarks />
+        public const uint ChatLogType = 18;
     }
     #endregion
 
     #region DataType Node Identifiers
-    /// <summary>
-    /// A class that declares constants for all DataTypes in the Model Design.
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class DataTypeIds
     {
-        /// <summary>
-        /// The identifier for the ChatLog DataType.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLog = new ExpandedNodeId(OpcUaChatServer.DataTypes.ChatLog, OpcUaChatServer.Namespaces.OpcUaChatServer);
     }
     #endregion
 
     #region Method Node Identifiers
-    /// <summary>
-    /// A class that declares constants for all Methods in the Model Design.
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class MethodIds
     {
-        /// <summary>
-        /// The identifier for the ChatLogsType_Post Method.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLogsType_Post = new ExpandedNodeId(OpcUaChatServer.Methods.ChatLogsType_Post, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the ChatLogs_Post Method.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLogs_Post = new ExpandedNodeId(OpcUaChatServer.Methods.ChatLogs_Post, OpcUaChatServer.Namespaces.OpcUaChatServer);
     }
     #endregion
 
     #region Object Node Identifiers
-    /// <summary>
-    /// A class that declares constants for all Objects in the Model Design.
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class ObjectIds
     {
-        /// <summary>
-        /// The identifier for the ChatLogs Object.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLogs = new ExpandedNodeId(OpcUaChatServer.Objects.ChatLogs, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the ChatLog_Encoding_DefaultBinary Object.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLog_Encoding_DefaultBinary = new ExpandedNodeId(OpcUaChatServer.Objects.ChatLog_Encoding_DefaultBinary, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the ChatLog_Encoding_DefaultXml Object.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLog_Encoding_DefaultXml = new ExpandedNodeId(OpcUaChatServer.Objects.ChatLog_Encoding_DefaultXml, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the ChatLog_Encoding_DefaultJson Object.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLog_Encoding_DefaultJson = new ExpandedNodeId(OpcUaChatServer.Objects.ChatLog_Encoding_DefaultJson, OpcUaChatServer.Namespaces.OpcUaChatServer);
     }
     #endregion
 
     #region ObjectType Node Identifiers
-    /// <summary>
-    /// A class that declares constants for all ObjectTypes in the Model Design.
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class ObjectTypeIds
     {
-        /// <summary>
-        /// The identifier for the ChatLogsType ObjectType.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLogsType = new ExpandedNodeId(OpcUaChatServer.ObjectTypes.ChatLogsType, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the ChatLogEventType ObjectType.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLogEventType = new ExpandedNodeId(OpcUaChatServer.ObjectTypes.ChatLogEventType, OpcUaChatServer.Namespaces.OpcUaChatServer);
     }
     #endregion
 
     #region Variable Node Identifiers
-    /// <summary>
-    /// A class that declares constants for all Variables in the Model Design.
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class VariableIds
     {
-        /// <summary>
-        /// The identifier for the ChatLogsType_Post_InputArguments Variable.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLogsType_Post_InputArguments = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogsType_Post_InputArguments, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the ChatLogsType_PostCount Variable.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLogsType_PostCount = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogsType_PostCount, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the ChatLogEventType_ChatLog Variable.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLogEventType_ChatLog = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogEventType_ChatLog, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the ChatLogs_Post_InputArguments Variable.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLogs_Post_InputArguments = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogs_Post_InputArguments, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the ChatLogs_PostCount Variable.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLogs_PostCount = new ExpandedNodeId(OpcUaChatServer.Variables.ChatLogs_PostCount, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_BinarySchema Variable.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId OpcUaChatServer_BinarySchema = new ExpandedNodeId(OpcUaChatServer.Variables.OpcUaChatServer_BinarySchema, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_BinarySchema_NamespaceUri Variable.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId OpcUaChatServer_BinarySchema_NamespaceUri = new ExpandedNodeId(OpcUaChatServer.Variables.OpcUaChatServer_BinarySchema_NamespaceUri, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_BinarySchema_Deprecated Variable.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId OpcUaChatServer_BinarySchema_Deprecated = new ExpandedNodeId(OpcUaChatServer.Variables.OpcUaChatServer_BinarySchema_Deprecated, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_BinarySchema_ChatLog Variable.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId OpcUaChatServer_BinarySchema_ChatLog = new ExpandedNodeId(OpcUaChatServer.Variables.OpcUaChatServer_BinarySchema_ChatLog, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_XmlSchema Variable.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId OpcUaChatServer_XmlSchema = new ExpandedNodeId(OpcUaChatServer.Variables.OpcUaChatServer_XmlSchema, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_XmlSchema_NamespaceUri Variable.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId OpcUaChatServer_XmlSchema_NamespaceUri = new ExpandedNodeId(OpcUaChatServer.Variables.OpcUaChatServer_XmlSchema_NamespaceUri, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_XmlSchema_Deprecated Variable.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId OpcUaChatServer_XmlSchema_Deprecated = new ExpandedNodeId(OpcUaChatServer.Variables.OpcUaChatServer_XmlSchema_Deprecated, OpcUaChatServer.Namespaces.OpcUaChatServer);
 
-        /// <summary>
-        /// The identifier for the OpcUaChatServer_XmlSchema_ChatLog Variable.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId OpcUaChatServer_XmlSchema_ChatLog = new ExpandedNodeId(OpcUaChatServer.Variables.OpcUaChatServer_XmlSchema_ChatLog, OpcUaChatServer.Namespaces.OpcUaChatServer);
     }
     #endregion
 
     #region VariableType Node Identifiers
-    /// <summary>
-    /// A class that declares constants for all VariableTypes in the Model Design.
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class VariableTypeIds
     {
-        /// <summary>
-        /// The identifier for the ChatLogType VariableType.
-        /// </summary>
+        /// <remarks />
         public static readonly ExpandedNodeId ChatLogType = new ExpandedNodeId(OpcUaChatServer.VariableTypes.ChatLogType, OpcUaChatServer.Namespaces.OpcUaChatServer);
     }
     #endregion
 
     #region BrowseName Declarations
-    /// <summary>
-    /// Declares all of the BrowseNames used in the Model Design.
-    /// </summary>
+    /// <remarks />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class BrowseNames
     {
-        /// <summary>
-        /// The BrowseName for the ChatLog component.
-        /// </summary>
+        /// <remarks />
         public const string ChatLog = "ChatLog";
 
-        /// <summary>
-        /// The BrowseName for the ChatLogEventType component.
-        /// </summary>
+        /// <remarks />
         public const string ChatLogEventType = "ChatLogEventType";
 
-        /// <summary>
-        /// The BrowseName for the ChatLogs component.
-        /// </summary>
+        /// <remarks />
         public const string ChatLogs = "ChatLogs";
 
-        /// <summary>
-        /// The BrowseName for the ChatLogsType component.
-        /// </summary>
+        /// <remarks />
         public const string ChatLogsType = "ChatLogsType";
 
-        /// <summary>
-        /// The BrowseName for the ChatLogType component.
-        /// </summary>
+        /// <remarks />
         public const string ChatLogType = "ChatLogType";
 
-        /// <summary>
-        /// The BrowseName for the OpcUaChatServer_BinarySchema component.
-        /// </summary>
+        /// <remarks />
         public const string OpcUaChatServer_BinarySchema = "OpcUaChatServer";
 
-        /// <summary>
-        /// The BrowseName for the OpcUaChatServer_XmlSchema component.
-        /// </summary>
+        /// <remarks />
         public const string OpcUaChatServer_XmlSchema = "OpcUaChatServer";
 
-        /// <summary>
-        /// The BrowseName for the Post component.
-        /// </summary>
+        /// <remarks />
         public const string Post = "Post";
 
-        /// <summary>
-        /// The BrowseName for the PostCount component.
-        /// </summary>
+        /// <remarks />
         public const string PostCount = "PostCount";
     }
     #endregion
 
     #region Namespace Declarations
-    /// <summary>
-    /// Defines constants for all namespaces referenced by the model design.
-    /// </summary>
+    /// <remarks />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class Namespaces
     {

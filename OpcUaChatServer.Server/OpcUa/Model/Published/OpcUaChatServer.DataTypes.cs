@@ -1,5 +1,5 @@
 /* ========================================================================
- * Copyright (c) 2005-2019 The OPC Foundation, Inc. All rights reserved.
+ * Copyright (c) 2005-2021 The OPC Foundation, Inc. All rights reserved.
  *
  * OPC Foundation MIT License 1.00
  *
@@ -38,35 +38,25 @@ namespace OpcUaChatServer
 {
     #region ChatLog Class
     #if (!OPCUA_EXCLUDE_ChatLog)
-    /// <summary>
-    /// A chat log
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     [DataContract(Namespace = OpcUaChatServer.Namespaces.OpcUaChatServer)]
-    public partial class ChatLog : IEncodeable
+    public partial class ChatLog : IEncodeable, IJsonEncodeable
     {
         #region Constructors
-        /// <summary>
-        /// The default constructor.
-        /// </summary>
+        /// <remarks />
         public ChatLog()
         {
             Initialize();
         }
-
-        /// <summary>
-        /// Called by the .NET framework during deserialization.
-        /// </summary>
+            
         [OnDeserializing]
         private void Initialize(StreamingContext context)
         {
             Initialize();
         }
-
-        /// <summary>
-        /// Sets private members to default values.
-        /// </summary>
+            
         private void Initialize()
         {
             m_at = DateTime.MinValue;
@@ -103,22 +93,16 @@ namespace OpcUaChatServer
 
         #region IEncodeable Members
         /// <summary cref="IEncodeable.TypeId" />
-        public virtual ExpandedNodeId TypeId
-        {
-            get { return DataTypeIds.ChatLog; }
-        }
+        public virtual ExpandedNodeId TypeId => DataTypeIds.ChatLog; 
 
         /// <summary cref="IEncodeable.BinaryEncodingId" />
-        public virtual ExpandedNodeId BinaryEncodingId
-        {
-            get { return ObjectIds.ChatLog_Encoding_DefaultBinary; }
-        }
+        public virtual ExpandedNodeId BinaryEncodingId => ObjectIds.ChatLog_Encoding_DefaultBinary;
 
         /// <summary cref="IEncodeable.XmlEncodingId" />
-        public virtual ExpandedNodeId XmlEncodingId
-        {
-            get { return ObjectIds.ChatLog_Encoding_DefaultXml; }
-        }
+        public virtual ExpandedNodeId XmlEncodingId => ObjectIds.ChatLog_Encoding_DefaultXml;
+                    
+        /// <summary cref="IJsonEncodeable.JsonEncodingId" />
+        public virtual ExpandedNodeId JsonEncodingId => ObjectIds.ChatLog_Encoding_DefaultJson; 
 
         /// <summary cref="IEncodeable.Encode(IEncoder)" />
         public virtual void Encode(IEncoder encoder)
@@ -195,9 +179,7 @@ namespace OpcUaChatServer
     }
 
     #region ChatLogCollection Class
-    /// <summary>
-    /// A collection of ChatLog objects.
-    /// </summary>
+    /// <remarks />
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     [CollectionDataContract(Name = "ListOfChatLog", Namespace = OpcUaChatServer.Namespaces.OpcUaChatServer, ItemName = "ChatLog")]
@@ -208,26 +190,18 @@ namespace OpcUaChatServer
     #endif
     {
         #region Constructors
-        /// <summary>
-        /// Initializes the collection with default values.
-        /// </summary>
+        /// <remarks />
         public ChatLogCollection() {}
 
-        /// <summary>
-        /// Initializes the collection with an initial capacity.
-        /// </summary>
+        /// <remarks />
         public ChatLogCollection(int capacity) : base(capacity) {}
 
-        /// <summary>
-        /// Initializes the collection with another collection.
-        /// </summary>
+        /// <remarks />
         public ChatLogCollection(IEnumerable<ChatLog> collection) : base(collection) {}
         #endregion
 
         #region Static Operators
-        /// <summary>
-        /// Converts an array to a collection.
-        /// </summary>
+        /// <remarks />
         public static implicit operator ChatLogCollection(ChatLog[] values)
         {
             if (values != null)
@@ -238,9 +212,7 @@ namespace OpcUaChatServer
             return new ChatLogCollection();
         }
 
-        /// <summary>
-        /// Converts a collection to an array.
-        /// </summary>
+        /// <remarks />
         public static explicit operator ChatLog[](ChatLogCollection values)
         {
             if (values != null)
@@ -254,9 +226,7 @@ namespace OpcUaChatServer
 
         #if !NET_STANDARD
         #region ICloneable Methods
-        /// <summary>
-        /// Creates a deep copy of the collection.
-        /// </summary>
+        /// <remarks />
         public object Clone()
         {
             return (ChatLogCollection)this.MemberwiseClone();

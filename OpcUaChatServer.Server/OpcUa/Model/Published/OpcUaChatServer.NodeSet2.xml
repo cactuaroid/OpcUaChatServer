@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<UANodeSet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd">
+<UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" LastModified="2022-06-24T02:29:59.2494024Z" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd">
   <NamespaceUris>
     <Uri>https://github.com/cactuaroid/OpcUaChatServer</Uri>
   </NamespaceUris>
   <Models>
-    <Model ModelUri="https://github.com/cactuaroid/OpcUaChatServer">
-      <RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.04.6" PublicationDate="2020-04-10T00:00:00Z" />
+    <Model ModelUri="https://github.com/cactuaroid/OpcUaChatServer" Version="1.0.0" PublicationDate="2022-06-24T02:29:59.2494024Z">
+      <RequiredModel ModelUri="http://opcfoundation.org/UA/" XmlSchemaUri="http://opcfoundation.org/UA/2008/02/Types.xsd" />
     </Model>
   </Models>
   <Aliases>
@@ -44,30 +44,41 @@
     <Alias Alias="HasModellingRule">i=37</Alias>
     <Alias Alias="HasEncoding">i=38</Alias>
     <Alias Alias="HasDescription">i=39</Alias>
+    <Alias Alias="HasCause">i=53</Alias>
+    <Alias Alias="ToState">i=52</Alias>
+    <Alias Alias="FromState">i=51</Alias>
+    <Alias Alias="HasEffect">i=54</Alias>
+    <Alias Alias="HasTrueSubState">i=9004</Alias>
+    <Alias Alias="HasFalseSubState">i=9005</Alias>
+    <Alias Alias="HasDictionaryEntry">i=17597</Alias>
+    <Alias Alias="HasCondition">i=9006</Alias>
+    <Alias Alias="HasGuard">i=15112</Alias>
+    <Alias Alias="HasAddIn">i=17604</Alias>
+    <Alias Alias="HasInterface">i=17603</Alias>
   </Aliases>
-  <UAObjectType NodeId="ns=1;i=15041" BrowseName="1:ChatLogsType">
+  <UAObjectType NodeId="ns=1;i=1" BrowseName="1:ChatLogsType">
     <DisplayName>ChatLogsType</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent">ns=1;i=15001</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=15009</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=2</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=4</Reference>
       <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
     </References>
   </UAObjectType>
-  <UAMethod NodeId="ns=1;i=15001" BrowseName="1:Post" ParentNodeId="ns=1;i=15041">
+  <UAMethod NodeId="ns=1;i=2" BrowseName="1:Post" ParentNodeId="ns=1;i=1">
     <DisplayName>Post</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=15002</Reference>
-      <Reference ReferenceType="i=3065">ns=1;i=15044</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=3</Reference>
+      <Reference ReferenceType="i=3065">ns=1;i=7</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15041</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1</Reference>
     </References>
   </UAMethod>
-  <UAVariable NodeId="ns=1;i=15002" BrowseName="InputArguments" ParentNodeId="ns=1;i=15001" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+  <UAVariable NodeId="ns=1;i=3" BrowseName="InputArguments" ParentNodeId="ns=1;i=2" DataType="i=296" ValueRank="1" ArrayDimensions="0">
     <DisplayName>InputArguments</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15001</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=2</Reference>
     </References>
     <Value>
       <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
@@ -104,37 +115,37 @@
       </ListOfExtensionObject>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15009" BrowseName="1:PostCount" ParentNodeId="ns=1;i=15041" DataType="UInt32">
+  <UAVariable NodeId="ns=1;i=4" BrowseName="1:PostCount" ParentNodeId="ns=1;i=1" DataType="UInt32">
     <DisplayName>PostCount</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15041</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1</Reference>
     </References>
   </UAVariable>
-  <UAObjectType NodeId="ns=1;i=15044" BrowseName="1:ChatLogEventType">
+  <UAObjectType NodeId="ns=1;i=7" BrowseName="1:ChatLogEventType">
     <DisplayName>ChatLogEventType</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=15055</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=17</Reference>
       <Reference ReferenceType="HasSubtype" IsForward="false">i=2041</Reference>
     </References>
   </UAObjectType>
-  <UAVariable NodeId="ns=1;i=15055" BrowseName="1:ChatLog" ParentNodeId="ns=1;i=15044" DataType="ns=1;i=15078">
+  <UAVariable NodeId="ns=1;i=17" BrowseName="1:ChatLog" ParentNodeId="ns=1;i=7" DataType="ns=1;i=19">
     <DisplayName>ChatLog</DisplayName>
     <References>
-      <Reference ReferenceType="HasTypeDefinition">ns=1;i=15074</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;i=18</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15044</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7</Reference>
     </References>
   </UAVariable>
-  <UAVariableType NodeId="ns=1;i=15074" BrowseName="1:ChatLogType" DataType="ns=1;i=15078">
+  <UAVariableType NodeId="ns=1;i=18" BrowseName="1:ChatLogType" DataType="ns=1;i=19">
     <DisplayName>ChatLogType</DisplayName>
     <Description>Represents a chat log</Description>
     <References>
       <Reference ReferenceType="HasSubtype" IsForward="false">i=63</Reference>
     </References>
   </UAVariableType>
-  <UADataType NodeId="ns=1;i=15078" BrowseName="1:ChatLog">
+  <UADataType NodeId="ns=1;i=19" BrowseName="1:ChatLog">
     <DisplayName>ChatLog</DisplayName>
     <Description>A chat log</Description>
     <References>
@@ -146,29 +157,29 @@
       <Field Name="Content" DataType="i=12" />
     </Definition>
   </UADataType>
-  <UAObject NodeId="ns=1;i=15079" BrowseName="1:ChatLogs" EventNotifier="1">
+  <UAObject NodeId="ns=1;i=20" BrowseName="1:ChatLogs" EventNotifier="1">
     <DisplayName>ChatLogs</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent">ns=1;i=15003</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=15010</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=21</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=23</Reference>
       <Reference ReferenceType="Organizes" IsForward="false">i=85</Reference>
       <Reference ReferenceType="HasNotifier" IsForward="false">i=2253</Reference>
-      <Reference ReferenceType="HasTypeDefinition">ns=1;i=15041</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;i=1</Reference>
     </References>
   </UAObject>
-  <UAMethod NodeId="ns=1;i=15003" BrowseName="1:Post" ParentNodeId="ns=1;i=15079" MethodDeclarationId="ns=1;i=15001">
+  <UAMethod NodeId="ns=1;i=21" BrowseName="1:Post" ParentNodeId="ns=1;i=20" MethodDeclarationId="ns=1;i=2">
     <DisplayName>Post</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=15004</Reference>
-      <Reference ReferenceType="i=3065">ns=1;i=15044</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15079</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=22</Reference>
+      <Reference ReferenceType="i=3065">ns=1;i=7</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=20</Reference>
     </References>
   </UAMethod>
-  <UAVariable NodeId="ns=1;i=15004" BrowseName="InputArguments" ParentNodeId="ns=1;i=15003" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+  <UAVariable NodeId="ns=1;i=22" BrowseName="InputArguments" ParentNodeId="ns=1;i=21" DataType="i=296" ValueRank="1" ArrayDimensions="0">
     <DisplayName>InputArguments</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15003</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=21</Reference>
     </References>
     <Value>
       <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
@@ -205,27 +216,27 @@
       </ListOfExtensionObject>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15010" BrowseName="1:PostCount" ParentNodeId="ns=1;i=15079" DataType="UInt32">
+  <UAVariable NodeId="ns=1;i=23" BrowseName="1:PostCount" ParentNodeId="ns=1;i=20" DataType="UInt32">
     <DisplayName>PostCount</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15079</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=20</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=15082" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+  <UAObject NodeId="ns=1;i=24" BrowseName="Default Binary" SymbolicName="DefaultBinary">
     <DisplayName>Default Binary</DisplayName>
     <References>
-      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;i=15078</Reference>
-      <Reference ReferenceType="HasDescription">ns=1;i=15087</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;i=19</Reference>
+      <Reference ReferenceType="HasDescription">ns=1;i=29</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=15083" BrowseName="1:OpcUaChatServer" SymbolicName="OpcUaChatServer_BinarySchema" DataType="ByteString">
+  <UAVariable NodeId="ns=1;i=25" BrowseName="1:OpcUaChatServer" SymbolicName="OpcUaChatServer_BinarySchema" ReleaseStatus="Deprecated" DataType="ByteString">
     <DisplayName>OpcUaChatServer</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=15085</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=15086</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=15087</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=27</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=28</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=29</Reference>
       <Reference ReferenceType="HasComponent" IsForward="false">i=93</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
     </References>
@@ -246,50 +257,50 @@ ZT0iQ29udGVudCIgVHlwZU5hbWU9Im9wYzpTdHJpbmciIC8+DQogIDwvb3BjOlN0cnVjdHVyZWRU
 eXBlPg0KDQo8L29wYzpUeXBlRGljdGlvbmFyeT4=</ByteString>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15085" BrowseName="NamespaceUri" ParentNodeId="ns=1;i=15083" DataType="String">
+  <UAVariable NodeId="ns=1;i=27" BrowseName="NamespaceUri" ReleaseStatus="Deprecated" ParentNodeId="ns=1;i=25" DataType="String">
     <DisplayName>NamespaceUri</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15083</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=25</Reference>
     </References>
     <Value>
       <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">https://github.com/cactuaroid/OpcUaChatServer</String>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15086" BrowseName="Deprecated" ParentNodeId="ns=1;i=15083" DataType="Boolean">
+  <UAVariable NodeId="ns=1;i=28" BrowseName="Deprecated" ReleaseStatus="Deprecated" ParentNodeId="ns=1;i=25" DataType="Boolean">
     <DisplayName>Deprecated</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15083</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=25</Reference>
     </References>
     <Value>
       <Boolean xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">true</Boolean>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15087" BrowseName="1:ChatLog" ParentNodeId="ns=1;i=15083" DataType="String">
+  <UAVariable NodeId="ns=1;i=29" BrowseName="1:ChatLog" ReleaseStatus="Deprecated" ParentNodeId="ns=1;i=25" DataType="String">
     <DisplayName>ChatLog</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=69</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15083</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=25</Reference>
     </References>
     <Value>
       <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ChatLog</String>
     </Value>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=15090" BrowseName="Default XML" SymbolicName="DefaultXml">
+  <UAObject NodeId="ns=1;i=32" BrowseName="Default XML" SymbolicName="DefaultXml">
     <DisplayName>Default XML</DisplayName>
     <References>
-      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;i=15078</Reference>
-      <Reference ReferenceType="HasDescription">ns=1;i=15095</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;i=19</Reference>
+      <Reference ReferenceType="HasDescription">ns=1;i=37</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=15091" BrowseName="1:OpcUaChatServer" SymbolicName="OpcUaChatServer_XmlSchema" DataType="ByteString">
+  <UAVariable NodeId="ns=1;i=33" BrowseName="1:OpcUaChatServer" SymbolicName="OpcUaChatServer_XmlSchema" ReleaseStatus="Deprecated" DataType="ByteString">
     <DisplayName>OpcUaChatServer</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=15093</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=15094</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=15095</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=35</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=36</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=37</Reference>
       <Reference ReferenceType="HasComponent" IsForward="false">i=92</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
     </References>
@@ -299,58 +310,62 @@ DQogIHhtbG5zOnVhPSJodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvVUEvMjAwOC8wMi9UeXBlcy54
 c2QiDQogIHhtbG5zOnRucz0iaHR0cHM6Ly9naXRodWIuY29tL2NhY3R1YXJvaWQvT3BjVWFDaGF0
 U2VydmVyIg0KICB0YXJnZXROYW1lc3BhY2U9Imh0dHBzOi8vZ2l0aHViLmNvbS9jYWN0dWFyb2lk
 L09wY1VhQ2hhdFNlcnZlciINCiAgZWxlbWVudEZvcm1EZWZhdWx0PSJxdWFsaWZpZWQiDQo+DQog
-IDx4czppbXBvcnQgbmFtZXNwYWNlPSJodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvVUEvMjAwOC8w
-Mi9UeXBlcy54c2QiIC8+DQoNCiAgPHhzOmNvbXBsZXhUeXBlIG5hbWU9IkNoYXRMb2ciPg0KICAg
-IDx4czphbm5vdGF0aW9uPg0KICAgICAgPHhzOmRvY3VtZW50YXRpb24+QSBjaGF0IGxvZzwveHM6
-ZG9jdW1lbnRhdGlvbj4NCiAgICA8L3hzOmFubm90YXRpb24+DQogICAgPHhzOnNlcXVlbmNlPg0K
-ICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iQXQiIHR5cGU9InhzOmRhdGVUaW1lIiBtaW5PY2N1cnM9
-IjAiIC8+DQogICAgICA8eHM6ZWxlbWVudCBuYW1lPSJOYW1lIiB0eXBlPSJ4czpzdHJpbmciIG1p
-bk9jY3Vycz0iMCIgbmlsbGFibGU9InRydWUiIC8+DQogICAgICA8eHM6ZWxlbWVudCBuYW1lPSJD
-b250ZW50IiB0eXBlPSJ4czpzdHJpbmciIG1pbk9jY3Vycz0iMCIgbmlsbGFibGU9InRydWUiIC8+
-DQogICAgPC94czpzZXF1ZW5jZT4NCiAgPC94czpjb21wbGV4VHlwZT4NCiAgPHhzOmVsZW1lbnQg
-bmFtZT0iQ2hhdExvZyIgdHlwZT0idG5zOkNoYXRMb2ciIC8+DQoNCiAgPHhzOmNvbXBsZXhUeXBl
-IG5hbWU9Ikxpc3RPZkNoYXRMb2ciPg0KICAgIDx4czpzZXF1ZW5jZT4NCiAgICAgIDx4czplbGVt
-ZW50IG5hbWU9IkNoYXRMb2ciIHR5cGU9InRuczpDaGF0TG9nIiBtaW5PY2N1cnM9IjAiIG1heE9j
-Y3Vycz0idW5ib3VuZGVkIiBuaWxsYWJsZT0idHJ1ZSIgLz4NCiAgICA8L3hzOnNlcXVlbmNlPg0K
-ICA8L3hzOmNvbXBsZXhUeXBlPg0KICA8eHM6ZWxlbWVudCBuYW1lPSJMaXN0T2ZDaGF0TG9nIiB0
-eXBlPSJ0bnM6TGlzdE9mQ2hhdExvZyIgbmlsbGFibGU9InRydWUiPjwveHM6ZWxlbWVudD4NCg0K
-PC94czpzY2hlbWE+</ByteString>
+IDx4czphbm5vdGF0aW9uPg0KICAgIDx4czphcHBpbmZvPg0KICAgICAgPHRuczpNb2RlbCBNb2Rl
+bFVyaT0iaHR0cHM6Ly9naXRodWIuY29tL2NhY3R1YXJvaWQvT3BjVWFDaGF0U2VydmVyIiBWZXJz
+aW9uPSIxLjAuMCIgUHVibGljYXRpb25EYXRlPSIyMDIyLTA2LTI0VDAyOjI5OjU5LjI0OTQwMjRa
+IiAvPg0KICAgIDwveHM6YXBwaW5mbz4NCiAgPC94czphbm5vdGF0aW9uPg0KICANCiAgPHhzOmlt
+cG9ydCBuYW1lc3BhY2U9Imh0dHA6Ly9vcGNmb3VuZGF0aW9uLm9yZy9VQS8yMDA4LzAyL1R5cGVz
+LnhzZCIgLz4NCg0KICA8eHM6Y29tcGxleFR5cGUgbmFtZT0iQ2hhdExvZyI+DQogICAgPHhzOmFu
+bm90YXRpb24+DQogICAgICA8eHM6ZG9jdW1lbnRhdGlvbj5BIGNoYXQgbG9nPC94czpkb2N1bWVu
+dGF0aW9uPg0KICAgIDwveHM6YW5ub3RhdGlvbj4NCiAgICA8eHM6c2VxdWVuY2U+DQogICAgICA8
+eHM6ZWxlbWVudCBuYW1lPSJBdCIgdHlwZT0ieHM6ZGF0ZVRpbWUiIG1pbk9jY3Vycz0iMCIgLz4N
+CiAgICAgIDx4czplbGVtZW50IG5hbWU9Ik5hbWUiIHR5cGU9InhzOnN0cmluZyIgbWluT2NjdXJz
+PSIwIiBuaWxsYWJsZT0idHJ1ZSIgLz4NCiAgICAgIDx4czplbGVtZW50IG5hbWU9IkNvbnRlbnQi
+IHR5cGU9InhzOnN0cmluZyIgbWluT2NjdXJzPSIwIiBuaWxsYWJsZT0idHJ1ZSIgLz4NCiAgICA8
+L3hzOnNlcXVlbmNlPg0KICA8L3hzOmNvbXBsZXhUeXBlPg0KICA8eHM6ZWxlbWVudCBuYW1lPSJD
+aGF0TG9nIiB0eXBlPSJ0bnM6Q2hhdExvZyIgLz4NCg0KICA8eHM6Y29tcGxleFR5cGUgbmFtZT0i
+TGlzdE9mQ2hhdExvZyI+DQogICAgPHhzOnNlcXVlbmNlPg0KICAgICAgPHhzOmVsZW1lbnQgbmFt
+ZT0iQ2hhdExvZyIgdHlwZT0idG5zOkNoYXRMb2ciIG1pbk9jY3Vycz0iMCIgbWF4T2NjdXJzPSJ1
+bmJvdW5kZWQiIG5pbGxhYmxlPSJ0cnVlIiAvPg0KICAgIDwveHM6c2VxdWVuY2U+DQogIDwveHM6
+Y29tcGxleFR5cGU+DQogIDx4czplbGVtZW50IG5hbWU9Ikxpc3RPZkNoYXRMb2ciIHR5cGU9InRu
+czpMaXN0T2ZDaGF0TG9nIiBuaWxsYWJsZT0idHJ1ZSI+PC94czplbGVtZW50Pg0KDQo8L3hzOnNj
+aGVtYT4=</ByteString>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15093" BrowseName="NamespaceUri" ParentNodeId="ns=1;i=15091" DataType="String">
+  <UAVariable NodeId="ns=1;i=35" BrowseName="NamespaceUri" ReleaseStatus="Deprecated" ParentNodeId="ns=1;i=33" DataType="String">
     <DisplayName>NamespaceUri</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15091</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=33</Reference>
     </References>
     <Value>
       <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">https://github.com/cactuaroid/OpcUaChatServer</String>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15094" BrowseName="Deprecated" ParentNodeId="ns=1;i=15091" DataType="Boolean">
+  <UAVariable NodeId="ns=1;i=36" BrowseName="Deprecated" ReleaseStatus="Deprecated" ParentNodeId="ns=1;i=33" DataType="Boolean">
     <DisplayName>Deprecated</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15091</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=33</Reference>
     </References>
     <Value>
       <Boolean xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">true</Boolean>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15095" BrowseName="1:ChatLog" ParentNodeId="ns=1;i=15091" DataType="String">
+  <UAVariable NodeId="ns=1;i=37" BrowseName="1:ChatLog" ReleaseStatus="Deprecated" ParentNodeId="ns=1;i=33" DataType="String">
     <DisplayName>ChatLog</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=69</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15091</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=33</Reference>
     </References>
     <Value>
       <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">//xs:element[@name='ChatLog']</String>
     </Value>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=15098" BrowseName="Default JSON" SymbolicName="DefaultJson">
+  <UAObject NodeId="ns=1;i=40" BrowseName="Default JSON" SymbolicName="DefaultJson">
     <DisplayName>Default JSON</DisplayName>
     <References>
-      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;i=15078</Reference>
+      <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;i=19</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
     </References>
   </UAObject>

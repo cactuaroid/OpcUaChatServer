@@ -5,6 +5,12 @@
   targetNamespace="https://github.com/cactuaroid/OpcUaChatServer"
   elementFormDefault="qualified"
 >
+  <xs:annotation>
+    <xs:appinfo>
+      <tns:Model ModelUri="https://github.com/cactuaroid/OpcUaChatServer" Version="1.0.0" PublicationDate="2022-06-24T02:29:59.2494024Z" />
+    </xs:appinfo>
+  </xs:annotation>
+  
   <xs:import namespace="http://opcfoundation.org/UA/2008/02/Types.xsd" />
 
   <xs:complexType name="ChatLog">
